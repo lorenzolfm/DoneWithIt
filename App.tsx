@@ -2,6 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+/* NOTES:
+ * View: 'div' for the mobile world
+ * Text: used for displaying text
+ *
+ * In the mobile world, when using react-native, we have to use the components provided by them.
+ * We add styles to components via the "style" prop.
+ *
+ * When we compile our app, the components will be compiled to their native widgets
+ */
+
 export default function App() {
   return (
     <View style={styles.container}>
