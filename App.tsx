@@ -1,11 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {
- SafeAreaView, StyleSheet, Text,
- Image, TouchableWithoutFeedback, 
- TouchableOpacity, View, Button,
- Alert, Platform,
+ SafeAreaView, StyleSheet,
+ Platform, View, Dimensions, Text
 } from 'react-native';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 
 /* NOTES:
  * View: 'div' for the mobile world
@@ -18,55 +16,25 @@ import {
  */
 
 export default function App() {
-  console.log('App executed') // Check the terminal!
-
-  const ViewComponent = (
-    // div equivalent
-    <View style={{ width: 200, height: 70, backgroundColor: 'dodgerblue' }}/>
-  );
-
-  const TextComponent = (
-    // h1,h2, ..., p equivalent
-    <Text numberOfLines={1} onPress={() => Alert.alert('Text Pressed!')}>
-      Open up App.tsx to start working on your app!
-    </Text>
-  );
-
-  const ImageComponent = (
-    // Used to display an image
-    <Image
-      blurRadius={10} // Blurry images
-      fadeDuration={1000} // Fades the image in
-      //resizeMode={...} How to resize the image if container is not the same size as image
-      source={require('./assets/icon.png')}
-      style={{ width: 50, height: 50 }}
-    />
-  );
-
-  const Touchables = (
-    // So we can handle press events
-    <>
-      <TouchableWithoutFeedback onPress={() => Alert.alert('Image pressed!')}>
-        {ImageComponent}
-      </TouchableWithoutFeedback>
-
-      <TouchableOpacity onPress={() => Alert.alert('View pressed!')}>
-        {ViewComponent}
-      </TouchableOpacity>
-    </>
-  );
-
-  const ButtonComponent = (
-    // A fancy button
-    <Button title="Click Me" onPress={() => alert('Button tapped')} />
-  );
+  const dim = Dimensions.get('window');
+  console.log(useDimensions());
+  console.log(useDeviceOrientation());
 
   return ( // A JSX expression
     <SafeAreaView style={styles.container}>
       {/* A safe area view display the content only in the visible part of the device */}
-      {TextComponent}
-      {Touchables}
-      {ButtonComponent}
+      <View style={{
+        backgroundColor: 'dodgerblue',
+        width: 150, // Physical pixels = DIPs x Scale Factor
+        height: '10%', // Relative sizes
+        }}>
+      </View>
+      <View>
+        <Text>Width: {dim.width}</Text>
+        <Text>Height: {dim.height}</Text>
+        <Text>Scale: {dim.scale}</Text>
+        <Text>FontScale: {dim.fontScale}</Text>
+      </View>
     </SafeAreaView>
   );
 }
