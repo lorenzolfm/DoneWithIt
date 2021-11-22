@@ -1,6 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+ SafeAreaView, StyleSheet, Text,
+ Image, TouchableWithoutFeedback, 
+ TouchableOpacity, View, Button,
+ Alert, Platform,
+} from 'react-native';
 
 /* NOTES:
  * View: 'div' for the mobile world
@@ -15,19 +20,62 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   console.log('App executed') // Check the terminal!
 
+  const ViewComponent = (
+    // div equivalent
+    <View style={{ width: 200, height: 70, backgroundColor: 'dodgerblue' }}/>
+  );
+
+  const TextComponent = (
+    // h1,h2, ..., p equivalent
+    <Text numberOfLines={1} onPress={() => Alert.alert('Text Pressed!')}>
+      Open up App.tsx to start working on your app!
+    </Text>
+  );
+
+  const ImageComponent = (
+    // Used to display an image
+    <Image
+      blurRadius={10} // Blurry images
+      fadeDuration={1000} // Fades the image in
+      //resizeMode={...} How to resize the image if container is not the same size as image
+      source={require('./assets/icon.png')}
+      style={{ width: 50, height: 50 }}
+    />
+  );
+
+  const Touchables = (
+    // So we can handle press events
+    <>
+      <TouchableWithoutFeedback onPress={() => Alert.alert('Image pressed!')}>
+        {ImageComponent}
+      </TouchableWithoutFeedback>
+
+      <TouchableOpacity onPress={() => Alert.alert('View pressed!')}>
+        {ViewComponent}
+      </TouchableOpacity>
+    </>
+  );
+
+  const ButtonComponent = (
+    // A fancy button
+    <Button title="Click Me" onPress={() => alert('Button tapped')} />
+  );
+
   return ( // A JSX expression
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      {/* A safe area view display the content only in the visible part of the device */}
+      {TextComponent}
+      {Touchables}
+      {ButtonComponent}
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flex: 1, // View is flexible, will fill all the available space.
+    backgroundColor: Platform.OS === 'android' ? '#fff' : '#000',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
   },
 });
