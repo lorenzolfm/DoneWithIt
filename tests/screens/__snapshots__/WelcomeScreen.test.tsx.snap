@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WelcomeScreen matches snapshot 1`] = `
+<ImageBackground
+  source={
+    Object {
+      "testUri": "../../../app/assets/background.jpg",
+    }
+  }
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "position": "absolute",
+        "top": 70,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../app/assets/logo-red.png",
+        }
+      }
+      style={
+        Object {
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+    <Text>
+      Sell What You Don't Need
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fc5c65",
+        "height": 70,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#4ecdc4",
+        "height": 70,
+        "width": "100%",
+      }
+    }
+  />
+</ImageBackground>
+`;
