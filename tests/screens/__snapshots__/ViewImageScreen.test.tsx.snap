@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewImageScreen snapshot matches 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#000",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fc5c65",
+        "height": 50,
+        "left": 30,
+        "position": "absolute",
+        "top": 40,
+        "width": 50,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#4ecdc4",
+        "height": 50,
+        "position": "absolute",
+        "right": 30,
+        "top": 40,
+        "width": 50,
+      }
+    }
+  />
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../app/assets/chair.jpg",
+      }
+    }
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;
