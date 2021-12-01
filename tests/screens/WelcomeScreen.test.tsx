@@ -1,3 +1,4 @@
+import { shallow } from 'enzyme';
 import { WelcomeScreen } from '../../app/screens/WelcomeScreen';
 
 describe('WelcomeScreen', () => {
