@@ -1,41 +1,48 @@
 import React from 'react';
 import {
- SafeAreaView, StyleSheet,
- Platform, View, Dimensions, Text
+  StyleSheet,
+  Platform,
+  View,
 } from 'react-native';
-import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
-
-/* NOTES:
- * View: 'div' for the mobile world
- * Text: used for displaying text
- *
- * In the mobile world, when using react-native, we have to use the components provided by them.
- * We add styles to components via the "style" prop.
- *
- * When we compile our app, the components will be compiled to their native widgets
- */
 
 export default function App() {
-  const dim = Dimensions.get('window');
-  console.log(useDimensions());
-  console.log(useDeviceOrientation());
-
-  return ( // A JSX expression
-    <SafeAreaView style={styles.container}>
-      {/* A safe area view display the content only in the visible part of the device */}
+  return (
+    <View
+      style={{
+        backgroundColor: 'white',
+        flex: 1,
+        flexDirection: 'row', // Horizontal
+        justifyContent: 'center',  // Main axis
+        alignItems: 'center', // Secondary axis
+        flexWrap: 'wrap',
+      }}
+    >
       <View style={{
         backgroundColor: 'dodgerblue',
-        width: 150, // Physical pixels = DIPs x Scale Factor
-        height: '10%', // Relative sizes
-        }}>
-      </View>
-      <View>
-        <Text>Width: {dim.width}</Text>
-        <Text>Height: {dim.height}</Text>
-        <Text>Scale: {dim.scale}</Text>
-        <Text>FontScale: {dim.fontScale}</Text>
-      </View>
-    </SafeAreaView>
+        width: 100,
+        height: 100,
+      }} />
+      <View style={{
+        backgroundColor: 'gold',
+        width: 100,
+        height: 100,
+      }} />
+      <View style={{
+        backgroundColor: 'tomato',
+        width: 100,
+        height: 100,
+      }} />
+      <View style={{
+        backgroundColor: 'grey',
+        width: 100,
+        height: 100,
+      }} />
+      <View style={{
+        backgroundColor: 'greenyellow',
+        width: 100,
+        height: 100,
+      }} />
+    </View>
   );
 }
 
