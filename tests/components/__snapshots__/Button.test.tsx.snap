@@ -4,14 +4,20 @@ exports[`Button snapshot matches 1`] = `
 <ForwardRef
   onPress={[Function]}
   style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#fc5c65",
-      "borderRadius": 25,
-      "justifyContent": "center",
-      "padding": 15,
-      "width": "100%",
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fc5c65",
+        "borderRadius": 25,
+        "justifyContent": "center",
+        "marginVertical": 10,
+        "padding": 15,
+        "width": "100%",
+      },
+      Object {
+        "backgroundColor": "#fc5c65",
+      },
+    ]
   }
 >
   <Text

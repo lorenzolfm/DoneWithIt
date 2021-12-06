@@ -6,11 +6,12 @@ import colors from '../config/colors';
 type ButtonProps = {
   title: string,
   onPress: Function,
+  color?: string,
 }
 
-export const Button = ({ title, onPress }: ButtonProps) => {
+export const Button = ({ title, onPress, color = 'primary' }: ButtonProps) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={() => onPress()}>
+    <TouchableOpacity style={[styles.button, { backgroundColor: colors[color] }]} onPress={() => onPress()}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
@@ -24,6 +25,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 15,
     width: '100%',
+    marginVertical: 10,
   },
   text: {
     color: colors.white,

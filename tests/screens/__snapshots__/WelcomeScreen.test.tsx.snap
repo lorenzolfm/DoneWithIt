@@ -2,6 +2,7 @@
 
 exports[`WelcomeScreen matches snapshot 1`] = `
 <ImageBackground
+  blurRadius={10}
   source={
     Object {
       "testUri": "../../../app/assets/background.jpg",
@@ -37,27 +38,35 @@ exports[`WelcomeScreen matches snapshot 1`] = `
         }
       }
     />
-    <Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 25,
+          "fontWeight": "600",
+          "paddingVertical": 20,
+        }
+      }
+    >
       Sell What You Don't Need
     </Text>
   </View>
   <View
     style={
       Object {
-        "backgroundColor": "#fc5c65",
-        "height": 70,
+        "padding": 20,
         "width": "100%",
       }
     }
-  />
-  <View
-    style={
-      Object {
-        "backgroundColor": "#4ecdc4",
-        "height": 70,
-        "width": "100%",
-      }
-    }
-  />
+  >
+    <Button
+      onPress={[Function]}
+      title="Login"
+    />
+    <Button
+      color="secondary"
+      onPress={[Function]}
+      title="Register"
+    />
+  </View>
 </ImageBackground>
 `;
