@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card snapshot matches 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderRadius": 15,
+      "marginBottom": 20,
+      "overflow": "hidden",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../app/assets/jacket.jpg",
+      }
+    }
+    style={
+      Object {
+        "height": 200,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "padding": 20,
+      }
+    }
+  >
+    <AppText
+      style={
+        Object {
+          "marginBottom": 10,
+        }
+      }
+    >
+      title
+    </AppText>
+    <AppText
+      style={
+        Object {
+          "color": "#4ecdc4",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      subtitle
+    </AppText>
+  </View>
+</View>
+`;

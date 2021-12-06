@@ -3,18 +3,19 @@ import { Text, StyleSheet, Platform } from 'react-native';
 
 type AppTextProps = {
   children?: React.ReactNode,
+  style?: object,
 };
 
-export const AppText = ({ children }: AppTextProps) => {
+export const AppText = ({ children, style }: AppTextProps) => {
   return (
-    <Text style={styles.text}>{children}</Text>
+    <Text style={[styles.text, style]}>{children}</Text>
   );
 };
 
 
 const styles = StyleSheet.create({
   text: {
-    color: 'tomato',
+    color: "#000",
     ...Platform.select({
       ios: {
         fontSize: 20,
