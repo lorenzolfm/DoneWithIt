@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListingDetailsScreen snapshot matches 1`] = `
+<View>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../app/assets/jacket.jpg",
+      }
+    }
+    style={
+      Object {
+        "height": 300,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "padding": 20,
+      }
+    }
+  >
+    <AppText
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Red jacket for sale
+    </AppText>
+    <AppText
+      style={
+        Object {
+          "color": "#4ecdc4",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "marginVertical": 10,
+        }
+      }
+    >
+      $100
+    </AppText>
+    <View
+      style={
+        Object {
+          "marginVertical": 40,
+        }
+      }
+    >
+      <ListItem
+        image={
+          Object {
+            "testUri": "../../../app/assets/mosh.jpg",
+          }
+        }
+        subtitle="5 Listings"
+        title="Mosh Hamedani"
+      />
+    </View>
+  </View>
+</View>
+`;
