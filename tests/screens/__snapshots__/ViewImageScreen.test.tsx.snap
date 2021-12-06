@@ -12,27 +12,33 @@ exports[`ViewImageScreen snapshot matches 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "#fc5c65",
-        "height": 50,
         "left": 30,
         "position": "absolute",
         "top": 40,
-        "width": 50,
       }
     }
-  />
+  >
+    <View
+      color="white"
+      name="close"
+      size={30}
+    />
+  </View>
   <View
     style={
       Object {
-        "backgroundColor": "#4ecdc4",
-        "height": 50,
         "position": "absolute",
         "right": 30,
         "top": 40,
-        "width": 50,
       }
     }
-  />
+  >
+    <View
+      color="white"
+      name="trash-can-outline"
+      size={35}
+    />
+  </View>
   <Image
     resizeMode="contain"
     source={
