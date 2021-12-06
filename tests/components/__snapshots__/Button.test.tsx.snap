@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshot matches 1`] = `
+<ForwardRef
+  onPress={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fc5c65",
+      "borderRadius": 25,
+      "justifyContent": "center",
+      "padding": 15,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    test
+  </Text>
+</ForwardRef>
+`;
