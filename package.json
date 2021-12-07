@@ -15,6 +15,7 @@
     "react": "17.0.1",
     "react-dom": "^17.0.2",
     "react-native": "0.64.3",
+    "react-native-gesture-handler": "~1.10.2",
     "react-native-web": "0.17.1"
   },
   "devDependencies": {
@@ -39,6 +40,7 @@
     "setupFilesAfterEnv": [
       "jest-enzyme"
     ],
+    "setupFiles": ["<rootDir>/jest/setup.ts"],
     "testEnvironment": "enzyme",
     "testEnvironmentOptions": {
       "enzymeAdapter": "react16"
