@@ -2,7 +2,7 @@
 
 exports[`Button snapshot matches 1`] = `
 <ForwardRef
-  onPress={[Function]}
+  onPress={[MockFunction]}
   style={
     Array [
       Object {

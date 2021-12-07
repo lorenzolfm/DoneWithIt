@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessagesScreen snapshot matches 1`] = `
+<Screen>
+  <FlatList
+    ItemSeparatorComponent={[Function]}
+    data={
+      Array [
+        Object {
+          "description": "D1",
+          "id": 0,
+          "image": Object {
+            "testUri": "../../../app/assets/mosh.jpg",
+          },
+          "title": "T1",
+        },
+        Object {
+          "description": "D2",
+          "id": 1,
+          "image": Object {
+            "testUri": "../../../app/assets/mosh.jpg",
+          },
+          "title": "T2",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onEndReachedThreshold={2}
+    onRefresh={[Function]}
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+</Screen>
+`;
