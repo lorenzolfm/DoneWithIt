@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { GestureResponderEvent, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 import colors from '../config/colors';
 
 type ButtonProps = {
   title: string,
-  onPress: Function,
+  onPress: (event: GestureResponderEvent) => void,
   color?: string,
 }
 
@@ -13,7 +13,7 @@ export const Button = ({ title, onPress, color = 'primary' }: ButtonProps) => {
   return (
     <TouchableOpacity
       style={[styles.button, { backgroundColor: colors[color] }]}
-      onPress={() => onPress()}
+      onPress={onPress}
     >
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
