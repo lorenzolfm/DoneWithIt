@@ -9,7 +9,7 @@ describe('ListItem', () => {
           title="test-title"
           subtitle="test-subtitle" 
           image={require('../../app/assets/jacket.jpg')}
-          />
+        />
        )
     ).toMatchSnapshot();
   });
