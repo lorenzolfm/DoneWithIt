@@ -8,13 +8,13 @@ import colors from '../config/colors';
 
 type ListItemProps = {
   title: string,
-  subtitle: string,
-  image: ImageSourcePropType,
+  subtitle?: string,
+  image?: ImageSourcePropType,
   onPress?: (event: GestureResponderEvent) => void,
   renderRightActions?: any,
+  ImageComponent?: React.ReactNode,
 };
-
-export const ListItem = ({ title, subtitle, image, onPress, renderRightActions }: ListItemProps) => {
+export const ListItem = ({ title, subtitle, image, ImageComponent, onPress, renderRightActions }: ListItemProps) => {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight
@@ -22,10 +22,11 @@ export const ListItem = ({ title, subtitle, image, onPress, renderRightActions }
         underlayColor={colors.light}
       >
         <View style={styles.container}>
-          <Image style={styles.image} source={image} />
-          <View>
+          {ImageComponent}
+          {image && <Image style={styles.image} source={image} />}
+          <View style={styles.detailsContainer}>
             <AppText style={styles.title}>{title}</AppText>
-            <AppText style={styles.subtitle}>{subtitle}</AppText>
+            {subtitle && <AppText style={styles.subtitle}>{subtitle}</AppText>}
           </View>
         </View>
       </TouchableHighlight>
@@ -42,7 +43,10 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: 35,
-    marginRight: 10,
+  },
+  detailsContainer: {
+    justifyContent: 'center',
+    marginLeft: 10,
   },
   title: {
     fontWeight: 'bold',
