@@ -3,11 +3,12 @@
 exports[`ListItem matches snapshot 1`] = `
 <View>
   <ForwardRef
-    underlayColor="#f8f4g4"
+    underlayColor="#f8f4f4"
   >
     <View
       style={
         Object {
+          "backgroundColor": "#fff",
           "flexDirection": "row",
           "padding": 15,
         }

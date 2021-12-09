@@ -3,10 +3,13 @@
 exports[`Screen snapshot matches 1`] = `
 <ForwardRef(SafeAreaView)
   style={
-    Object {
-      "flex": 1,
-      "paddingTop": 0,
-    }
+    Array [
+      Object {
+        "flex": 1,
+        "paddingTop": 0,
+      },
+      undefined,
+    ]
   }
 />
 `;

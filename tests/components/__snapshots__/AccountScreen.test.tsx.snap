@@ -1,15 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AccountScreen snapshot matches 1`] = `
-<Screen>
-  <ListItem
-    image={
+<Screen
+  style={
+    Object {
+      "backgroundColor": "#f8f4f4",
+    }
+  }
+>
+  <View
+    style={
       Object {
-        "testUri": "../../../app/assets/mosh.jpg",
+        "marginVertical": 20,
       }
     }
-    subtitle="programmingwithmosh@gmail.com"
-    title="Mosh Hamedani"
+  >
+    <ListItem
+      image={
+        Object {
+          "testUri": "../../../app/assets/mosh.jpg",
+        }
+      }
+      subtitle="programmingwithmosh@gmail.com"
+      title="Mosh Hamedani"
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "marginVertical": 20,
+      }
+    }
+  >
+    <FlatList
+      ItemSeparatorComponent={[Function]}
+      data={
+        Array [
+          Object {
+            "icon": Object {
+              "backgroundColor": "#fc5c65",
+              "name": "format-list-bulleted",
+            },
+            "title": "My Listings",
+          },
+          Object {
+            "icon": Object {
+              "backgroundColor": "#4ecdc4",
+              "name": "email",
+            },
+            "title": "My Messages",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      updateCellsBatchingPeriod={50}
+      windowSize={21}
+    />
+  </View>
+  <ListItem
+    IconComponent={
+      <Icon
+        backgroundColor="#ffe66d"
+        name="logout"
+      />
+    }
+    title="Log Out"
   />
 </Screen>
 `;
