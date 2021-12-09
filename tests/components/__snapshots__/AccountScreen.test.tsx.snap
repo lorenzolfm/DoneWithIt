@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountScreen snapshot matches 1`] = `
+<Screen>
+  <ListItem
+    image={
+      Object {
+        "testUri": "../../../app/assets/mosh.jpg",
+      }
+    }
+    subtitle="programmingwithmosh@gmail.com"
+    title="Mosh Hamedani"
+  />
+</Screen>
+`;
