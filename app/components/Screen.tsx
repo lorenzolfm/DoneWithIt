@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, Platform, StyleSheet, StatusBar } from "react-native"
+import { SafeAreaView, Platform, StyleSheet, StatusBar, View } from "react-native"
 
 type ScreenProps = {
   children?: React.ReactNode,
@@ -8,7 +8,9 @@ type ScreenProps = {
 export const Screen = ({ children, style }: ScreenProps) => {
   return (
     <SafeAreaView style={[styles.screen, style]}>
-      {children}
+      <View style={style}>
+        {children}
+      </View>
     </SafeAreaView>
   );
 };

@@ -11,5 +11,7 @@ exports[`Screen snapshot matches 1`] = `
       undefined,
     ]
   }
-/>
+>
+  <View />
+</ForwardRef(SafeAreaView)>
 `;
