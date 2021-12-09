@@ -9,6 +9,7 @@ export const AccountScreen = () => {
       <ListItem
         title="Mosh Hamedani"
         subtitle="programmingwithmosh@gmail.com"
+        image={require("../assets/mosh.jpg")}
       />
     </Screen>
   );
