@@ -1,10 +1,13 @@
 import React from 'react';
 import { SafeAreaView, Platform, StyleSheet, StatusBar } from "react-native"
 
-type ScreenProps = { children?: React.ReactNode }
-export const Screen = ({ children }: ScreenProps) => {
+type ScreenProps = {
+  children?: React.ReactNode,
+  style?: object,
+};
+export const Screen = ({ children, style }: ScreenProps) => {
   return (
-    <SafeAreaView style={styles.screen}>
+    <SafeAreaView style={[styles.screen, style]}>
       {children}
     </SafeAreaView>
   );

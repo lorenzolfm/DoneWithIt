@@ -12,9 +12,9 @@ type ListItemProps = {
   image?: ImageSourcePropType,
   onPress?: (event: GestureResponderEvent) => void,
   renderRightActions?: any,
-  ImageComponent?: React.ReactNode,
+  IconComponent?: React.ReactNode,
 };
-export const ListItem = ({ title, subtitle, image, ImageComponent, onPress, renderRightActions }: ListItemProps) => {
+export const ListItem = ({ title, subtitle, image, IconComponent, onPress, renderRightActions }: ListItemProps) => {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight
@@ -22,7 +22,7 @@ export const ListItem = ({ title, subtitle, image, ImageComponent, onPress, rend
         underlayColor={colors.light}
       >
         <View style={styles.container}>
-          {ImageComponent}
+          {IconComponent}
           {image && <Image style={styles.image} source={image} />}
           <View style={styles.detailsContainer}>
             <AppText style={styles.title}>{title}</AppText>
@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     padding: 15,
+    backgroundColor: colors.white,
   },
   image: {
     width: 70,
