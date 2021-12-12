@@ -13,7 +13,7 @@ type Props = {
   icon?: any,
   placeholder?: string,
   items?: Category[],
-  selectedItem: any,
+  selectedItem: Category,
   onSelectItem: Function,
 };
 export const AppPicker = ({ icon, placeholder, items, selectedItem, onSelectItem }: Props) => {

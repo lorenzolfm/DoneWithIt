@@ -19,7 +19,7 @@ export default function App() {
     <Screen>
       <AppPicker
         selectedItem={category}
-        onSelectItem={item => setCategory(item)}
+        onSelectItem={(item: Category) => setCategory(item)}
         items={categories}
         icon="apps"
         placeholder="Category"

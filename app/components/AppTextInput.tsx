@@ -7,12 +7,13 @@ import defaultStyles from '../config/styles';
 type Props = {
   icon?: any,
   otherProps?: object,
+  placeholder?: string,
 }
-export const AppTextInput = ({ icon, ...otherProps }: Props) => {
+export const AppTextInput = ({ icon, placeholder }: Props) => {
   return (
     <View style={styles.container}>
       {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon} />}
-      <TextInput style={defaultStyles.text} {...otherProps}/>
+      <TextInput style={defaultStyles.text} placeholder={placeholder}/>
     </View>
   );
 };
