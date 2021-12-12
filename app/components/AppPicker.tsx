@@ -1,25 +1,49 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, TouchableWithoutFeedback, Modal, Button, FlatList } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import defaultStyles from '../config/styles';
 import { AppText } from './AppText';
+import { Screen } from './Screen';
+
+import { Category } from '../types';
+import { PickerItem } from './PickerItem';
 
 type Props = {
   icon?: any,
   placeholder?: string,
+  items?: Category[],
 };
-export const AppPicker = ({ icon, placeholder }: Props) => {
+export const AppPicker = ({ icon, placeholder, items }: Props) => {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
-    <View style={styles.container}>
-      {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon} />}
-      <AppText style={styles.text}>{placeholder}</AppText>
-      <MaterialCommunityIcons
-        name='chevron-down'
-        size={20}
-        color={defaultStyles.colors.medium}
-      />
-    </View>
+    <>
+      <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
+        <View style={styles.container}>
+          {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon} />}
+          <AppText style={styles.text}>{placeholder}</AppText>
+          <MaterialCommunityIcons
+            name='chevron-down'
+            size={20}
+            color={defaultStyles.colors.medium}
+          />
+        </View>
+      </TouchableWithoutFeedback>
+      <Modal visible={modalVisible} animationType="slide">
+        <Screen>
+          <Button title="Close" onPress={() => setModalVisible(false)} />
+          <FlatList
+            data={items}
+            keyExtractor={item => item.value.toString()}
+            renderItem={
+              ({ item }) =>
+                <PickerItem label={item.label} onPress={() => setModalVisible(false)} />
+            }
+          />
+        </Screen>
+      </Modal>
+    </>
   );
 };
 

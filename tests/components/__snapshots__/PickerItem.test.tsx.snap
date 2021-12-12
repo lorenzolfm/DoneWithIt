@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PickerItem snapshot matches 1`] = `
+<ForwardRef
+  onPress={[MockFunction]}
+>
+  <AppText
+    style={
+      Object {
+        "padding": 20,
+      }
+    }
+  >
+    test
+  </AppText>
+</ForwardRef>
+`;
