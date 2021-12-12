@@ -8,7 +8,7 @@ type Props = {
   icon?: any,
   otherProps?: object,
   placeholder?: string,
-}
+};
 export const AppTextInput = ({ icon, placeholder }: Props) => {
   return (
     <View style={styles.container}>
