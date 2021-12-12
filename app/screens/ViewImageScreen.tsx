@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import colors from '../config/colors';
+import defaultStyles from '../config/styles';
 
 export const ViewImageScreen = () => {
   return (
@@ -24,7 +24,7 @@ export const ViewImageScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.black,
+    backgroundColor: defaultStyles.colors.black,
     flex: 1,
   },
   image: {

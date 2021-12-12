@@ -1,7 +1,7 @@
 import React from 'react';
 import { GestureResponderEvent, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-import colors from '../config/colors';
+import defaultStyles from '../config/styles';
 
 type ButtonProps = {
   title: string,
@@ -12,7 +12,7 @@ type ButtonProps = {
 export const Button = ({ title, onPress, color = 'primary' }: ButtonProps) => {
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor: colors[color] }]}
+      style={[styles.button, { backgroundColor: defaultStyles.colors[color] }]}
       onPress={onPress}
     >
       <Text style={styles.text}>{title}</Text>
@@ -22,7 +22,7 @@ export const Button = ({ title, onPress, color = 'primary' }: ButtonProps) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.primary,
+    backgroundColor: defaultStyles.colors.primary,
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   text: {
-    color: colors.white,
+    color: defaultStyles.colors.white,
     fontSize: 18,
     textTransform: 'uppercase',
     fontWeight: 'bold',

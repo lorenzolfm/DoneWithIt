@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, StyleSheet, Platform } from 'react-native';
+import { Text } from 'react-native';
+
+import defaultStyles from '../config/styles';
 
 type AppTextProps = {
   children?: React.ReactNode,
@@ -8,23 +10,6 @@ type AppTextProps = {
 
 export const AppText = ({ children, style }: AppTextProps) => {
   return (
-    <Text style={[styles.text, style]}>{children}</Text>
+    <Text style={[defaultStyles.text, style]}>{children}</Text>
   );
 };
-
-
-const styles = StyleSheet.create({
-  text: {
-    color: "#000",
-    ...Platform.select({
-      ios: {
-        fontSize: 20,
-        fontFamily: 'Avenir',
-      },
-      android: {
-        fontSize: 18,
-        fontFamily: 'Roboto',
-      },
-})
-  }
-})

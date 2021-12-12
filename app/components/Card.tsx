@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, ImageSourcePropType, StyleSheet, View } from "react-native";
 
-import colors from '../config/colors';
+import defaultStyles from '../config/styles';
 import { AppText } from "./AppText";
 type CardProps = {
   title: string,
@@ -23,7 +23,7 @@ export const Card = ({ title, subtitle, image }: CardProps) => {
 const styles = StyleSheet.create({
   card: {
     borderRadius: 15,
-    backgroundColor: colors.white,
+    backgroundColor: defaultStyles.colors.white,
     marginBottom: 20,
     overflow: 'hidden',
   },
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   subtitle: {
-    color: colors.secondary,
+    color: defaultStyles.colors.secondary,
     fontWeight: 'bold',
   }
 });
