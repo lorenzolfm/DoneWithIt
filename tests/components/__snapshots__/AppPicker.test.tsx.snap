@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppPicker snapshot matches 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#f8f4f4",
+      "borderRadius": 25,
+      "flexDirection": "row",
+      "marginVertical": 10,
+      "padding": 15,
+      "width": "100%",
+    }
+  }
+>
+  <AppText
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+  <View
+    color="#6e6969"
+    name="chevron-down"
+    size={20}
+  />
+</View>
+`;
