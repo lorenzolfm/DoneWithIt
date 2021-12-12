@@ -28,28 +28,30 @@ export const LoginScreen = () => {
         onSubmit={values => console.log(values)}
         validationSchema={validationSchema}
       >
-        { ({ handleChange, handleSubmit, errors }) => (
+        { ({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
           <>
             <AppTextInput
               autoCapitalize="none"
               autoCorrect={false}
               keyboardType="email-address"
+              onBlurEvent={() => setFieldTouched("email")}
               onChangeText={handleChange('email')}
               icon="email"
               placeholder="Email"
               textContentType="email"
             />
-            <ErrorMessage error={errors.email} />
+            <ErrorMessage error={errors.email} visible={touched.email} />
             <AppTextInput
               autoCapitalize="none"
               autoCorrect={false}
               icon="lock"
+              onBlurEvent={() => setFieldTouched("password")}
               onChangeText={handleChange('password')}
               placeholder="Password"
               textContentType="password"
               secureTextEntry
             />
-            <ErrorMessage error={errors.email} />
+            <ErrorMessage error={errors.password} visible={touched.password}/>
             <Button title="Login" onPress={() => handleSubmit()} />
           </>
         )}
