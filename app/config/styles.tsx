@@ -9,4 +9,3 @@ export default {
     fontFamily: Platform.OS === 'android' ? 'Roboto' : 'Avenir',
   },
 }
-
