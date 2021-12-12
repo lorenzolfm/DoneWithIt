@@ -13,8 +13,10 @@ type Props = {
   icon?: any,
   placeholder?: string,
   items?: Category[],
+  selectedItem: any,
+  onSelectItem: Function,
 };
-export const AppPicker = ({ icon, placeholder, items }: Props) => {
+export const AppPicker = ({ icon, placeholder, items, selectedItem, onSelectItem }: Props) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -22,7 +24,7 @@ export const AppPicker = ({ icon, placeholder, items }: Props) => {
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
         <View style={styles.container}>
           {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon} />}
-          <AppText style={styles.text}>{placeholder}</AppText>
+          <AppText style={styles.text}>{selectedItem?.label || placeholder}</AppText>
           <MaterialCommunityIcons
             name='chevron-down'
             size={20}
@@ -38,7 +40,7 @@ export const AppPicker = ({ icon, placeholder, items }: Props) => {
             keyExtractor={item => item.value.toString()}
             renderItem={
               ({ item }) =>
-                <PickerItem label={item.label} onPress={() => setModalVisible(false)} />
+                <PickerItem label={item.label} onPress={() => {setModalVisible(false); onSelectItem(item)}} />
             }
           />
         </Screen>
