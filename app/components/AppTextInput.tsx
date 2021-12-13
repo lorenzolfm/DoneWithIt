@@ -13,7 +13,12 @@ export const AppTextInput = ({ icon, placeholder, ...otherProps }: Props) => {
   return (
     <View style={styles.container}>
       {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon} />}
-      <TextInput style={defaultStyles.text} placeholder={placeholder} {...otherProps}/>
+      <TextInput
+        style={defaultStyles.text}
+        placeholder={placeholder}
+        placeholderTextColor={defaultStyles.colors.medium}
+        {...otherProps}
+      />
     </View>
   );
 };

@@ -16,6 +16,7 @@ exports[`AppTextInput snapshot matches 1`] = `
 >
   <TextInput
     allowFontScaling={true}
+    placeholderTextColor="#6e6969"
     rejectResponderTermination={true}
     style={
       Object {

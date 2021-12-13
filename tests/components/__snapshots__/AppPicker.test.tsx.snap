@@ -21,6 +21,7 @@ exports[`AppPicker snapshot matches 1`] = `
       <AppText
         style={
           Object {
+            "color": "#6e6969",
             "flex": 1,
           }
         }

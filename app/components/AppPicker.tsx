@@ -24,7 +24,10 @@ export const AppPicker = ({ icon, placeholder, items, selectedItem, onSelectItem
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
         <View style={styles.container}>
           {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon} />}
-          <AppText style={styles.text}>{selectedItem?.label || placeholder}</AppText>
+          {selectedItem ?
+            <AppText style={styles.text}>{selectedItem.label}</AppText> :
+            <AppText style={styles.placeholder}>{placeholder}</AppText>
+          }
           <MaterialCommunityIcons
             name='chevron-down'
             size={20}
@@ -40,7 +43,7 @@ export const AppPicker = ({ icon, placeholder, items, selectedItem, onSelectItem
             keyExtractor={item => item.value.toString()}
             renderItem={
               ({ item }) =>
-                <PickerItem label={item.label} onPress={() => {setModalVisible(false); onSelectItem(item)}} />
+                <PickerItem label={item.label} onPress={() => { setModalVisible(false); onSelectItem(item) }} />
             }
           />
         </Screen>
@@ -65,4 +68,8 @@ const styles = StyleSheet.create({
   text: {
     flex: 1,
   },
+  placeholder: {
+    flex: 1,
+    color: defaultStyles.colors.medium,
+  }
 });
