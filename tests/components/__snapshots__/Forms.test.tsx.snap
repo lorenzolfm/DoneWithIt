@@ -14,7 +14,7 @@ exports[`Forms AppForm snapshot matches 1`] = `
 </Formik>
 `;
 
-exports[`Forms AppFormField, snapshot matches 1`] = `
+exports[`Forms AppFormField snapshot matches 1`] = `
 <ContextProvider
   value={
     Object {

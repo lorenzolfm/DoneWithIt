@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import { Formik } from 'formik';
-import { AppForm, AppFormField, ErrorMessage, SubmitButton } from '../../app/components/Forms';
+import { AppForm, AppFormField, AppFormPicker, ErrorMessage, SubmitButton } from '../../app/components/Forms';
 
 describe('Forms', () => {
   const initialValues = {
@@ -13,12 +13,20 @@ describe('Forms', () => {
     )).toMatchSnapshot();
   });
 
-  it('AppFormField, snapshot matches', () => {
+  it('AppFormField snapshot matches', () => {
     expect(shallow(
       <Formik initialValues={initialValues} onSubmit={jest.fn()}>
         <AppFormField name="test" />
       </Formik>
     )).toMatchSnapshot();
+  });
+
+  it('AppFormPicker snapshot matches', () => {
+    expect(shallow(
+      <Formik initialValues={initialValues} onSubmit={jest.fn()}>
+        <AppFormPicker name="test" />
+      </Formik>
+    ));
   });
 
   it('Error Message snapshot matches', () => {
