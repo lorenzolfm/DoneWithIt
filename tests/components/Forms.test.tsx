@@ -1,0 +1,35 @@
+import { shallow } from 'enzyme';
+import { Formik } from 'formik';
+import { AppForm, AppFormField, ErrorMessage, SubmitButton } from '../../app/components/Forms';
+
+describe('Forms', () => {
+  const initialValues = {
+    email: '',
+    password: '',
+  };
+  it('AppForm snapshot matches', () => {
+    expect(shallow(
+      <AppForm initialValues={initialValues} onSubmit={jest.fn()} />
+    )).toMatchSnapshot();
+  });
+
+  it('AppFormField, snapshot matches', () => {
+    expect(shallow(
+      <Formik initialValues={initialValues} onSubmit={jest.fn()}>
+        <AppFormField name="test" />
+      </Formik>
+    )).toMatchSnapshot();
+  });
+
+  it('Error Message snapshot matches', () => {
+    expect(shallow(<ErrorMessage visible />)).toMatchSnapshot();
+  });
+
+  it('SubmitButton snapshot matches', () => {
+    expect(shallow(
+      <Formik initialValues={initialValues} onSubmit={jest.fn()}>
+        <SubmitButton title="test"/>
+      </Formik>
+    )).toMatchSnapshot();
+  });
+});
