@@ -24,7 +24,7 @@ exports[`LoginScreen snapshot matches 1`] = `
       }
     }
   />
-  <Formik
+  <AppForm
     initialValues={
       Object {
         "email": "",
@@ -144,7 +144,27 @@ exports[`LoginScreen snapshot matches 1`] = `
       }
     }
   >
-    <Component />
-  </Formik>
+    <AppFormField
+      autoCapitalize="none"
+      autoCorrect={false}
+      icon="email"
+      keyboardType="email-address"
+      name="email"
+      placeholder="Email"
+      textContentType="emailAddress"
+    />
+    <AppFormField
+      autoCapitalize="none"
+      autoCorrect={false}
+      icon="lock"
+      name="password"
+      placeholder="Password"
+      secureTextEntry={true}
+      textContentType="password"
+    />
+    <SubmitButton
+      title="Login"
+    />
+  </AppForm>
 </Screen>
 `;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppForm snapshot matches 1`] = `
+<Formik
+  initialValues={
+    Object {
+      "email": "",
+      "password": "",
+    }
+  }
+  onSubmit={[MockFunction]}
+>
+  <Component />
+</Formik>
+`;
