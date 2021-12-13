@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
+import { FormikErrors, FormikTouched } from 'formik';
 
 import { AppText } from './AppText';
 
 type Props = {
-  error?: string,
-  visible: boolean | undefined,
+  error?: FormikErrors<unknown>,
+  visible: FormikTouched<unknown>,
 };
 
 export const ErrorMessage = ({ error, visible }: Props) => {
