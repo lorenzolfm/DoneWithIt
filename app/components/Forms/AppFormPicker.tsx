@@ -8,9 +8,10 @@ import { ErrorMessage } from './ErrorMessage';
 type Props = {
   items?: Category[],
   name: string,
+  width?: number | string,
   placeholder?: string,
 };
-export const AppFormPicker = ({ items, name, placeholder }: Props) => {
+export const AppFormPicker = ({ items, name, width = '100%', placeholder }: Props) => {
   const { errors, setFieldValue, touched, values } = useFormikContext();
 
   return (
@@ -20,6 +21,7 @@ export const AppFormPicker = ({ items, name, placeholder }: Props) => {
         onSelectItem={(item: Category) => setFieldValue(name, item)}
         placeholder={placeholder}
         selectedItem={values[name]}
+        width={width}
       />
       <ErrorMessage error={errors[name]} visible={touched[name]} />
     </>

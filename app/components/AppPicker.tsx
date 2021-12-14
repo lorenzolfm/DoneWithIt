@@ -13,16 +13,17 @@ type Props = {
   icon?: any,
   placeholder?: string,
   items?: Category[],
+  width?: number | string,
   selectedItem: Category,
   onSelectItem: Function,
 };
-export const AppPicker = ({ icon, placeholder, items, selectedItem, onSelectItem }: Props) => {
+export const AppPicker = ({ icon, placeholder, items, width = '100%', selectedItem, onSelectItem }: Props) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <>
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-        <View style={styles.container}>
+        <View style={[styles.container, { width }]}>
           {icon && <MaterialCommunityIcons name={icon} size={20} color={defaultStyles.colors.medium} style={styles.icon} />}
           {selectedItem ?
             <AppText style={styles.text}>{selectedItem.label}</AppText> :
