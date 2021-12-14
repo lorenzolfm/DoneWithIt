@@ -31,6 +31,7 @@ exports[`ListItem matches snapshot 1`] = `
       <View
         style={
           Object {
+            "flex": 1,
             "justifyContent": "center",
             "marginLeft": 10,
           }
