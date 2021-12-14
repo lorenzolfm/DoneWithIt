@@ -13,11 +13,20 @@ type Props = {
   icon?: any,
   placeholder?: string,
   items?: Category[],
+  PickerItemComponent: React.ReactNode,
   width?: number | string,
   selectedItem: Category,
   onSelectItem: Function,
 };
-export const AppPicker = ({ icon, placeholder, items, width = '100%', selectedItem, onSelectItem }: Props) => {
+export const AppPicker = ({
+  icon,
+  placeholder,
+  items,
+  width = '100%',
+  selectedItem,
+  onSelectItem,
+  PickerItemComponent = PickerItem
+}: Props) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -44,7 +53,7 @@ export const AppPicker = ({ icon, placeholder, items, width = '100%', selectedIt
             keyExtractor={item => item.value.toString()}
             renderItem={
               ({ item }) =>
-                <PickerItem label={item.label} onPress={() => { setModalVisible(false); onSelectItem(item) }} />
+                <PickerItemComponent label={item.label} onPress={() => { setModalVisible(false); onSelectItem(item) }} />
             }
           />
         </Screen>
