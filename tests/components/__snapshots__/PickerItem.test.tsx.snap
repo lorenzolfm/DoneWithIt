@@ -11,7 +11,7 @@ exports[`PickerItem snapshot matches 1`] = `
       }
     }
   >
-    test
+    Furniture
   </AppText>
 </ForwardRef>
 `;

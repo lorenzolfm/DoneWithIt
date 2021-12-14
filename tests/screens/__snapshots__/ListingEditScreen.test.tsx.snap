@@ -217,23 +217,31 @@ exports[`ListingEditScreen snapshot matches 1`] = `
       width={120}
     />
     <AppFormPicker
+      PickerItemComponent={[Function]}
       items={
         Array [
           Object {
+            "backgroundColor": "red",
+            "icon": "apps",
             "label": "Furniture",
             "value": 1,
           },
           Object {
+            "backgroundColor": "green",
+            "icon": "email",
             "label": "Clothing",
             "value": 2,
           },
           Object {
+            "backgroundColor": "blue",
+            "icon": "lock",
             "label": "Camera",
             "value": 3,
           },
         ]
       }
       name="category"
+      numberOfColumns={3}
       placeholder="Category"
       width="50%"
     />

@@ -3,13 +3,13 @@ import { GestureResponderEvent, TouchableOpacity, StyleSheet } from 'react-nativ
 import { AppText } from './AppText';
 
 type Props = {
-  label: string,
+  item: any,
   onPress: (event: GestureResponderEvent) => void,
 };
-export const PickerItem = ({ label, onPress }: Props) => {
+export const PickerItem = ({ item, onPress }: Props) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <AppText style={styles.text}>{label}</AppText>
+      <AppText style={styles.text}>{item.label}</AppText>
     </TouchableOpacity>
   );
 };

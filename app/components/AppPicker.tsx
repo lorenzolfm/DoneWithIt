@@ -13,10 +13,11 @@ type Props = {
   icon?: any,
   placeholder?: string,
   items?: Category[],
-  PickerItemComponent: React.ReactNode,
   width?: number | string,
   selectedItem: Category,
   onSelectItem: Function,
+  PickerItemComponent: React.ReactNode,
+  numberOfColumns: number,
 };
 export const AppPicker = ({
   icon,
@@ -25,7 +26,8 @@ export const AppPicker = ({
   width = '100%',
   selectedItem,
   onSelectItem,
-  PickerItemComponent = PickerItem
+  PickerItemComponent = PickerItem,
+  numberOfColumns = 1,
 }: Props) => {
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -49,11 +51,16 @@ export const AppPicker = ({
         <Screen>
           <Button title="Close" onPress={() => setModalVisible(false)} />
           <FlatList
+            numColumns={numberOfColumns}
             data={items}
             keyExtractor={item => item.value.toString()}
             renderItem={
               ({ item }) =>
-                <PickerItemComponent label={item.label} onPress={() => { setModalVisible(false); onSelectItem(item) }} />
+                <PickerItemComponent
+                  item={item}
+                  label={item.label}
+                  onPress={() => { setModalVisible(false); onSelectItem(item) }}
+                />
             }
           />
         </Screen>

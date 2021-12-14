@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryPickerItem snapshot matches 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "paddingHorizontal": 20,
+      "paddingVertical": 15,
+      "width": "33%",
+    }
+  }
+>
+  <Icon
+    backgroundColor="red"
+    name="apps"
+    size={80}
+  />
+  <AppText
+    style={
+      Object {
+        "marginTop": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    Furniture
+  </AppText>
+</View>
+`;
