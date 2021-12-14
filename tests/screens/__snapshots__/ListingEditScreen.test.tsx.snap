@@ -214,6 +214,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
       maxLength={8}
       name="price"
       placeholder="Price"
+      width={120}
     />
     <AppFormPicker
       items={
@@ -234,6 +235,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
       }
       name="category"
       placeholder="Category"
+      width="50%"
     />
     <AppFormField
       maxLength={255}
