@@ -39,6 +39,7 @@ exports[`ListItem matches snapshot 1`] = `
         }
       >
         <AppText
+          numberOfLines={1}
           style={
             Object {
               "fontWeight": "bold",
@@ -48,6 +49,7 @@ exports[`ListItem matches snapshot 1`] = `
           test-title
         </AppText>
         <AppText
+          numberOfLines={2}
           style={
             Object {
               "color": "#6e6969",
