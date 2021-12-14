@@ -37,7 +37,6 @@ export const ListItem = ({
               name="chevron-right"
               size={30}
               color={defaultStyles.colors.medium}
-              style={styles.chevron}
             />
           }
         </View>
@@ -48,6 +47,7 @@ export const ListItem = ({
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: 'center',
     flexDirection: 'row',
     padding: 15,
     backgroundColor: defaultStyles.colors.white,
@@ -68,7 +68,4 @@ const styles = StyleSheet.create({
   subtitle: {
     color: defaultStyles.colors.medium,
   },
-  chevron: {
-    alignSelf: 'center',
-  }
 });
