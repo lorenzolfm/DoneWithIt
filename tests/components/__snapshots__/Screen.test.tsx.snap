@@ -12,6 +12,15 @@ exports[`Screen snapshot matches 1`] = `
     ]
   }
 >
-  <View />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
 </ForwardRef(SafeAreaView)>
 `;
