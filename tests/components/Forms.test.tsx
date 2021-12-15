@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import { Formik } from 'formik';
-import { AppForm, AppFormField, AppFormPicker, ErrorMessage, SubmitButton } from '../../app/components/Forms';
+import { AppForm, AppFormField, AppFormPicker, ErrorMessage, SubmitButton, FormImagePicker } from '../../app/components/Forms';
 
 describe('Forms', () => {
   const initialValues = {
@@ -39,5 +39,9 @@ describe('Forms', () => {
         <SubmitButton title="test"/>
       </Formik>
     )).toMatchSnapshot();
+  });
+
+  it('FormImagePicker snapshot matches', () => {
+    expect(shallow(<FormImagePicker />)).toMatchSnapshot();
   });
 });
