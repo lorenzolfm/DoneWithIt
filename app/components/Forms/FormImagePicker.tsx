@@ -7,24 +7,23 @@ import { ImageInputList } from '../ImageInputList';
 type Props = { name: string, };
 export const FormImagePicker = ({ name }: Props) => {
   const { errors, setFieldValue, touched, values } = useFormikContext();
-  const imageUris = values[name];
 
   const handleAdd = (uri: string) => {
-    setFieldValue(name, [...imageUris, uri]);
+    setFieldValue(name, [...values[name], uri]);
   }
 
   const handleRemove = (uri: string) => {
-    setFieldValue(name, imagesUris.filter((imageUri: string) => imageUri !== uri));
+    setFieldValue(name, values[name].filter((imageUri: string) => imageUri !== uri));
   };
 
   return (
     <>
-      <ImageInputList 
-        imageUris={imagesUris}
+      <ImageInputList
+        imageUris={values[name]}
         onAddImage={handleAdd}
         onRemoveImage={handleRemove}
       />
-      <ErrorMessage error={errors[name]} visible={touched[name]}/>
+      <ErrorMessage error={errors[name]} visible={touched[name]} />
     </>
   );
 };
