@@ -28,7 +28,7 @@ export const ImageInput = ({ imageUri, onChangeImage }: Props) => {
       'Delete',
       'Are you sure you want to delete this image?',
       [
-        { text: 'Yes', onPress: () => onChangeImage(null) },
+        { text: 'Yes', onPress: () => onChangeImage(imageUri) },
         { text: 'No', onPress: () => {} }
       ]
     )
