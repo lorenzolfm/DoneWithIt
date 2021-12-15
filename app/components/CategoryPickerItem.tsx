@@ -1,5 +1,5 @@
 import React from 'react';
-import { GestureResponderEvent, StyleSheet, View } from 'react-native';
+import { GestureResponderEvent, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { AppText } from './AppText';
 import { Icon } from './Icon';
@@ -11,11 +11,11 @@ type Props = {
 
 export const CategoryPickerItem = ({ item, onPress }: Props) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress} >
       <Icon backgroundColor={item.backgroundColor} name={item.icon} size={80} />
       <AppText style={styles.label}>{item.label}</AppText>
-    </View>
-  )
+    </TouchableOpacity>
+  );
 };
 
 const styles = StyleSheet.create({
