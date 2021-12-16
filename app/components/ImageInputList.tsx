@@ -15,6 +15,7 @@ export const ImageInputList = ({ imageUris = [], onRemoveImage, onAddImage }: Pr
     <View>
       <ScrollView
         horizontal
+        // TODO: Fix this issues
         ref={scrollView}
         onContentSizeChange={() => scrollView.current.scrollToEnd()}
       >
