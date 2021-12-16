@@ -30,7 +30,7 @@ const msgs: Array<Message> = [
 
 export const MessagesScreen = () => {
   const [messages, setMessages] = useState(msgs);
-  const [refreshing, setRefreshing] = useState(false);
+  const [refreshing] = useState(false);
 
   const handleDelete = (message: Message): void => {
     setMessages(messages.filter(m => m.id !== message.id));
