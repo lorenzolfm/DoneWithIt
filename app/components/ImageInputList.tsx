@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { ImageInput } from './ImageInput';
 
-
 type Props = {
   imageUris: string[],
   onRemoveImage: Function,
