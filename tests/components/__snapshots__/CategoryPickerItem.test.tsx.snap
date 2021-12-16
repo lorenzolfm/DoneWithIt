@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CategoryPickerItem snapshot matches 1`] = `
-<View
+<ForwardRef
+  onPress={[MockFunction]}
   style={
     Object {
       "alignItems": "center",
@@ -26,5 +27,5 @@ exports[`CategoryPickerItem snapshot matches 1`] = `
   >
     Furniture
   </AppText>
-</View>
+</ForwardRef>
 `;
