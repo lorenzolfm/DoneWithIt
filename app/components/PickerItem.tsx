@@ -5,11 +5,12 @@ import { AppText } from './AppText';
 type Props = {
   item: any,
   onPress: (event: GestureResponderEvent) => void,
+  label?: string,
 };
-export const PickerItem = ({ item, onPress }: Props) => {
+export const PickerItem = ({ item, onPress, label }: Props) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <AppText style={styles.text}>{item.label}</AppText>
+      <AppText style={styles.text}>{label ? label : item.label }</AppText>
     </TouchableOpacity>
   );
 };

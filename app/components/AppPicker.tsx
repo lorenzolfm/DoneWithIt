@@ -16,7 +16,7 @@ type Props = {
   width?: number | string,
   selectedItem: Category,
   onSelectItem: Function,
-  PickerItemComponent: React.ReactNode,
+  PickerItemComponent: typeof PickerItem,
   numberOfColumns: number,
 };
 export const AppPicker = ({
