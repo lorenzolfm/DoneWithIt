@@ -4,15 +4,14 @@ import { useFormikContext } from 'formik';
 import { AppTextInput } from '../AppTextInput';
 import { ErrorMessage } from './ErrorMessage';
 
+import { IIndexable } from '../../types';
+
 type Props = {
   name: string,
   width?: number | string,
   [otherProp: string]: any,
 };
 
-interface IIndexable {
-  [key: string]: any,
-};
 export const AppFormField = ({ name, width = '100%', ...otherProps }: Props) => {
   const { setFieldTouched, handleChange, errors, touched } = useFormikContext();
 

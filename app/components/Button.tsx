@@ -2,6 +2,7 @@ import React from 'react';
 import { GestureResponderEvent, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 import defaultStyles from '../config/styles';
+import { IIndexable } from '../types';
 
 type ButtonProps = {
   title: string,
@@ -12,7 +13,7 @@ type ButtonProps = {
 export const Button = ({ title, onPress, color = 'primary' }: ButtonProps) => {
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor: defaultStyles.colors[color] }]}
+      style={[styles.button, { backgroundColor: (defaultStyles.colors as IIndexable)[color] }]}
       onPress={onPress}
     >
       <Text style={styles.text}>{title}</Text>

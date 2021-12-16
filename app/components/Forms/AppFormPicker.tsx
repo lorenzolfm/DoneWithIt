@@ -6,6 +6,8 @@ import { AppPicker } from '../AppPicker';
 import { ErrorMessage } from './ErrorMessage';
 import { PickerItem } from '../PickerItem';
 
+import { IIndexable } from '../../types';
+
 type Props = {
   items?: Category[],
   name: string,
@@ -24,11 +26,11 @@ export const AppFormPicker = ({ items, name, numberOfColumns, width = '100%', pl
         numberOfColumns={numberOfColumns}
         onSelectItem={(item: Category) => setFieldValue(name, item)}
         placeholder={placeholder}
-        selectedItem={values[name]}
+        selectedItem={(values as IIndexable)[name]}
         width={width}
         PickerItemComponent={PickerItemComponent}
       />
-      <ErrorMessage error={errors[name]} visible={touched[name]} />
+      <ErrorMessage error={(errors as IIndexable)[name]} visible={(touched as IIndexable)[name]} />
     </>
   );
 };
