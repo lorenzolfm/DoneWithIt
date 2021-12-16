@@ -9,15 +9,14 @@ type Props = {
   onAddImage: Function,
 }
 export const ImageInputList = ({ imageUris = [], onRemoveImage, onAddImage }: Props) => {
-  const scrollView = useRef();
+  const scrollView = useRef<ScrollView>(null);
 
   return (
     <View>
       <ScrollView
         horizontal
-        // TODO: Fix this issues
         ref={scrollView}
-        onContentSizeChange={() => scrollView.current.scrollToEnd()}
+        onContentSizeChange={() => scrollView.current?.scrollToEnd()}
       >
         <View style={styles.container}>
           {imageUris.map((uri: string) => (
