@@ -18,7 +18,7 @@ export const AppFormField = ({ name, width = '100%', ...otherProps }: Props) => 
   return (
     <>
       <AppTextInput
-        onBlurEvent={() => setFieldTouched(name)}
+        onBlur={() => setFieldTouched(name)}
         onChangeText={handleChange(name)}
         width={width}
         {...otherProps}
