@@ -9,11 +9,7 @@ exports[`LoginScreen snapshot matches 1`] = `
   }
 >
   <Image
-    source={
-      Object {
-        "testUri": "../../../app/assets/logo-red.png",
-      }
-    }
+    source={1}
     style={
       Object {
         "alignSelf": "center",

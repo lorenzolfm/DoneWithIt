@@ -3,11 +3,7 @@
 exports[`ListingDetailsScreen snapshot matches 1`] = `
 <View>
   <Image
-    source={
-      Object {
-        "testUri": "../../../app/assets/jacket.jpg",
-      }
-    }
+    source={1}
     style={
       Object {
         "height": 300,
@@ -52,11 +48,7 @@ exports[`ListingDetailsScreen snapshot matches 1`] = `
       }
     >
       <ListItem
-        image={
-          Object {
-            "testUri": "../../../app/assets/mosh.jpg",
-          }
-        }
+        image={1}
         subtitle="5 Listings"
         title="Mosh Hamedani"
       />

@@ -15,6 +15,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
       Object {
         "category": null,
         "description": "",
+        "images": Array [],
         "price": "",
         "title": "",
       }
@@ -29,6 +30,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
         "_blacklistError": undefined,
         "_excludedEdges": Array [],
         "_nodes": Array [
+          "images",
           "category",
           "description",
           "price",
@@ -112,6 +114,40 @@ exports[`ListingEditScreen snapshot matches 1`] = `
               [Function],
             ],
             "type": "string",
+          },
+          "images": ArraySchema {
+            "_blacklist": ReferenceSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_blacklistError": undefined,
+            "_typeError": [Function],
+            "_whitelist": ReferenceSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_whitelistError": undefined,
+            "conditions": Array [],
+            "deps": Array [],
+            "exclusiveTests": Object {
+              "min": true,
+            },
+            "innerType": undefined,
+            "spec": Object {
+              "abortEarly": true,
+              "nullable": false,
+              "presence": "optional",
+              "recursive": true,
+              "strict": false,
+              "strip": false,
+            },
+            "tests": Array [
+              [Function],
+            ],
+            "transforms": Array [
+              [Function],
+            ],
+            "type": "array",
           },
           "price": NumberSchema {
             "_blacklist": ReferenceSet {
@@ -204,6 +240,9 @@ exports[`ListingEditScreen snapshot matches 1`] = `
       }
     }
   >
+    <FormImagePicker
+      name="images"
+    />
     <AppFormField
       maxLength={255}
       name="title"
@@ -253,6 +292,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
       placeholder="Description"
     />
     <SubmitButton
+      onSubmit={[Function]}
       title="Post"
     />
   </AppForm>

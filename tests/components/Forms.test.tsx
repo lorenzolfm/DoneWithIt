@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme';
 import { Formik } from 'formik';
+import { View } from 'react-native';
 import { AppForm, AppFormField, AppFormPicker, ErrorMessage, SubmitButton, FormImagePicker } from '../../app/components/Forms';
 
 describe('Forms', () => {
@@ -24,7 +25,7 @@ describe('Forms', () => {
   it('AppFormPicker snapshot matches', () => {
     expect(shallow(
       <Formik initialValues={initialValues} onSubmit={jest.fn()}>
-        <AppFormPicker name="test" />
+        <AppFormPicker name="test" PickerItemComponent={<View />} numberOfColumns={1} />
       </Formik>
     ));
   });
@@ -36,12 +37,17 @@ describe('Forms', () => {
   it('SubmitButton snapshot matches', () => {
     expect(shallow(
       <Formik initialValues={initialValues} onSubmit={jest.fn()}>
-        <SubmitButton title="test"/>
+        <SubmitButton title="test" />
       </Formik>
     )).toMatchSnapshot();
   });
 
   it('FormImagePicker snapshot matches', () => {
-    expect(shallow(<FormImagePicker />)).toMatchSnapshot();
+    expect(shallow(
+      <Formik initialValues={initialValues} onSubmit={jest.fn()}>
+        <FormImagePicker name="test" />
+      </Formik>
+    )).toMatchSnapshot();
+
   });
 });

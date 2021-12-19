@@ -16,11 +16,7 @@ exports[`AccountScreen snapshot matches 1`] = `
     }
   >
     <ListItem
-      image={
-        Object {
-          "testUri": "../../../app/assets/mosh.jpg",
-        }
-      }
+      image={1}
       subtitle="programmingwithmosh@gmail.com"
       title="Mosh Hamedani"
     />

@@ -16,11 +16,7 @@ exports[`ListItem matches snapshot 1`] = `
       }
     >
       <Image
-        source={
-          Object {
-            "testUri": "../../../app/assets/jacket.jpg",
-          }
-        }
+        source={1}
         style={
           Object {
             "borderRadius": 35,

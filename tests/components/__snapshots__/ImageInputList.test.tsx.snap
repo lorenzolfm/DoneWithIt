@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ImageInputList snapshot matches 1`] = `
-<View
-  style={Object {}}
-/>
+<View>
+  <ScrollView
+    horizontal={true}
+    onContentSizeChange={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <ImageInput />
+    </View>
+  </ScrollView>
+</View>
 `;

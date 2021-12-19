@@ -41,11 +41,7 @@ exports[`ViewImageScreen snapshot matches 1`] = `
   </View>
   <Image
     resizeMode="contain"
-    source={
-      Object {
-        "testUri": "../../../app/assets/chair.jpg",
-      }
-    }
+    source={1}
     style={
       Object {
         "height": "100%",

@@ -9,17 +9,13 @@ exports[`MessagesScreen snapshot matches 1`] = `
         Object {
           "description": "D1",
           "id": 0,
-          "image": Object {
-            "testUri": "../../../app/assets/mosh.jpg",
-          },
+          "image": 1,
           "title": "T1",
         },
         Object {
           "description": "D2",
           "id": 1,
-          "image": Object {
-            "testUri": "../../../app/assets/mosh.jpg",
-          },
+          "image": 1,
           "title": "T2",
         },
       ]

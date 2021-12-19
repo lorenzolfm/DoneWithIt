@@ -3,11 +3,7 @@
 exports[`WelcomeScreen matches snapshot 1`] = `
 <ImageBackground
   blurRadius={10}
-  source={
-    Object {
-      "testUri": "../../../app/assets/background.jpg",
-    }
-  }
+  source={1}
   style={
     Object {
       "flex": 1,
@@ -26,11 +22,7 @@ exports[`WelcomeScreen matches snapshot 1`] = `
     }
   >
     <Image
-      source={
-        Object {
-          "testUri": "../../../app/assets/logo-red.png",
-        }
-      }
+      source={1}
       style={
         Object {
           "height": 100,

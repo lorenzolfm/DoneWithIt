@@ -14,17 +14,13 @@ exports[`ListingsScreen snapshot matches 1`] = `
       Array [
         Object {
           "id": 0,
-          "image": Object {
-            "testUri": "../../../app/assets/jacket.jpg",
-          },
+          "image": 1,
           "price": 100,
           "title": "Red jacket for sale",
         },
         Object {
           "id": 1,
-          "image": Object {
-            "testUri": "../../../app/assets/couch.jpg",
-          },
+          "image": 1,
           "price": 100,
           "title": "Couch in great condition",
         },

@@ -12,11 +12,7 @@ exports[`Card snapshot matches 1`] = `
   }
 >
   <Image
-    source={
-      Object {
-        "testUri": "../../../app/assets/jacket.jpg",
-      }
-    }
+    source={1}
     style={
       Object {
         "height": 200,
