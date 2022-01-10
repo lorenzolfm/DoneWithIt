@@ -1,8 +1,8 @@
-import { shallow } from 'enzyme'
+import { create } from 'react-test-renderer'
 import { AppText } from '../../app/components/AppText';
 
 describe('AppText', () => {
   it('matches snapshot', () => {
-    expect(shallow(<AppText>Test</AppText>)).toMatchSnapshot()
+    expect(create(<AppText>Test</AppText>)).toMatchSnapshot()
   });
 });

@@ -3,7 +3,7 @@
 exports[`ListingDetailsScreen snapshot matches 1`] = `
 <View>
   <Image
-    source={1}
+    source={19}
     style={
       Object {
         "height": 300,
@@ -18,28 +18,42 @@ exports[`ListingDetailsScreen snapshot matches 1`] = `
       }
     }
   >
-    <AppText
+    <Text
       style={
-        Object {
-          "fontSize": 24,
-          "fontWeight": "500",
-        }
+        Array [
+          Object {
+            "color": "#0c0c0c",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "fontSize": 24,
+            "fontWeight": "500",
+          },
+        ]
       }
     >
       Red jacket for sale
-    </AppText>
-    <AppText
+    </Text>
+    <Text
       style={
-        Object {
-          "color": "#4ecdc4",
-          "fontSize": 20,
-          "fontWeight": "bold",
-          "marginVertical": 10,
-        }
+        Array [
+          Object {
+            "color": "#0c0c0c",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          },
+          Object {
+            "color": "#4ecdc4",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "marginVertical": 10,
+          },
+        ]
       }
     >
-      $100
-    </AppText>
+      100
+    </Text>
     <View
       style={
         Object {
@@ -47,11 +61,85 @@ exports[`ListingDetailsScreen snapshot matches 1`] = `
         }
       }
     >
-      <ListItem
-        image={1}
-        subtitle="5 Listings"
-        title="Mosh Hamedani"
-      />
+      <View>
+        <View
+          accessible={true}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "flexDirection": "row",
+                "padding": 15,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "borderRadius": 35,
+                  "height": 70,
+                  "width": 70,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "center",
+                  "marginLeft": 10,
+                }
+              }
+            >
+              <Text
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#0c0c0c",
+                      "fontFamily": "Avenir",
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontWeight": "bold",
+                    },
+                  ]
+                }
+              >
+                Mosh Hamedani
+              </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Array [
+                    Object {
+                      "color": "#0c0c0c",
+                      "fontFamily": "Avenir",
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "color": "#6e6969",
+                    },
+                  ]
+                }
+              >
+                5 Listings
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
     </View>
   </View>
 </View>

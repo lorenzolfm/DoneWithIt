@@ -1,31 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CategoryPickerItem snapshot matches 1`] = `
-<ForwardRef
-  onPress={[MockFunction]}
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "alignItems": "center",
+      "opacity": 1,
       "paddingHorizontal": 20,
       "paddingVertical": 15,
       "width": "33%",
     }
   }
 >
-  <Icon
-    backgroundColor="red"
-    name="apps"
-    size={80}
-  />
-  <AppText
+  <View
     style={
       Object {
-        "marginTop": 5,
-        "textAlign": "center",
+        "alignItems": "center",
+        "backgroundColor": "red",
+        "borderRadius": 40,
+        "height": 80,
+        "justifyContent": "center",
+        "width": 80,
       }
     }
   >
+    <View
+      color="#fff"
+      name="apps"
+      size={40}
+    />
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#0c0c0c",
+          "fontFamily": "Avenir",
+          "fontSize": 18,
+        },
+        Object {
+          "marginTop": 5,
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
     Furniture
-  </AppText>
-</ForwardRef>
+  </Text>
+</View>
 `;

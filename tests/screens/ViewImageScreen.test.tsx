@@ -1,8 +1,8 @@
-import { shallow } from "enzyme";
+import { create } from "react-test-renderer";
 import { ViewImageScreen } from "../../app/screens/ViewImageScreen";
 
 describe('ViewImageScreen', () => {
   it('snapshot matches', () => {
-    expect(shallow(<ViewImageScreen />)).toMatchSnapshot();
+    expect(create(<ViewImageScreen />)).toMatchSnapshot();
   });
 });

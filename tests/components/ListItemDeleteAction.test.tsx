@@ -1,8 +1,8 @@
-import { shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import { ListItemDeleteAction } from '../../app/components/ListItemDeleteAction';
 
 describe('ListItemDeleteAction', () => {
   it('snapshot matches', () => {
-    expect(shallow(<ListItemDeleteAction />)).toMatchSnapshot();
+    expect(create(<ListItemDeleteAction />)).toMatchSnapshot();
   });
 });

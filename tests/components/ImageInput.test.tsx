@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import { requestMediaLibraryPermissionsAsync, launchImageLibraryAsync, MediaTypeOptions } from 'expo-image-picker';
 import { ImageInput } from '../../app/components/ImageInput';
 
@@ -11,6 +11,6 @@ describe('ImageInput', () => {
     };
   });
   it('snapshot matches', () => {
-    expect(shallow(<ImageInput onChangeImage={() => jest.fn()} />)).toMatchSnapshot();
+    expect(create(<ImageInput onChangeImage={() => jest.fn()} />)).toMatchSnapshot();
   });
 });

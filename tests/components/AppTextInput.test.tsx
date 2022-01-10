@@ -1,8 +1,8 @@
-import { shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import { AppTextInput } from '../../app/components/AppTextInput';
 
 describe('AppTextInput', () => {
   it('snapshot matches', () => {
-    expect(shallow(<AppTextInput />)).toMatchSnapshot();
+    expect(create(<AppTextInput />)).toMatchSnapshot();
   });
 });

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Screen snapshot matches 1`] = `
-<ForwardRef(SafeAreaView)
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
   style={
     Array [
       Object {
@@ -22,5 +23,5 @@ exports[`Screen snapshot matches 1`] = `
       ]
     }
   />
-</ForwardRef(SafeAreaView)>
+</RCTSafeAreaView>
 `;

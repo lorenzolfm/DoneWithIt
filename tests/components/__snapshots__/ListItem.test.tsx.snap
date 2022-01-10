@@ -2,8 +2,16 @@
 
 exports[`ListItem matches snapshot 1`] = `
 <View>
-  <ForwardRef
-    underlayColor="#f8f4f4"
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
   >
     <View
       style={
@@ -34,28 +42,42 @@ exports[`ListItem matches snapshot 1`] = `
           }
         }
       >
-        <AppText
+        <Text
           numberOfLines={1}
           style={
-            Object {
-              "fontWeight": "bold",
-            }
+            Array [
+              Object {
+                "color": "#0c0c0c",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+              },
+              Object {
+                "fontWeight": "bold",
+              },
+            ]
           }
         >
           test-title
-        </AppText>
-        <AppText
+        </Text>
+        <Text
           numberOfLines={2}
           style={
-            Object {
-              "color": "#6e6969",
-            }
+            Array [
+              Object {
+                "color": "#0c0c0c",
+                "fontFamily": "Avenir",
+                "fontSize": 18,
+              },
+              Object {
+                "color": "#6e6969",
+              },
+            ]
           }
         >
           test-subtitle
-        </AppText>
+        </Text>
       </View>
     </View>
-  </ForwardRef>
+  </View>
 </View>
 `;

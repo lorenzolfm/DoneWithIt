@@ -1,8 +1,8 @@
-import { shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import { ListItemSeparator } from '../../app/components/ListItemSeparator';
 
 describe('ListItemSeparator', () => {
   it('snapshot matches', () => {
-    expect(shallow(<ListItemSeparator />)).toMatchSnapshot();
+    expect(create(<ListItemSeparator />)).toMatchSnapshot();
   });
 });

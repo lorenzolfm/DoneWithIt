@@ -6,7 +6,7 @@ import { AppText } from "../components/AppText";
 
 import defaultStyles from '../config/styles'
 
-export const ListingDetailsScreen = ({ route }) => {
+export const ListingDetailsScreen = ({ route }: any) => {
   const listing = route.params;
 
   return (

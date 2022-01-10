@@ -1,22 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListItemDeleteAction snapshot matches 1`] = `
-<TouchableWithoutFeedback>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#ff5252",
-        "justifyContent": "center",
-        "width": 70,
-      }
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#ff5252",
+      "justifyContent": "center",
+      "width": 70,
     }
-  >
-    <View
-      color="#fff"
-      name="trash-can"
-      size={35}
-    />
-  </View>
-</TouchableWithoutFeedback>
+  }
+>
+  <View
+    color="#fff"
+    name="trash-can"
+    size={35}
+  />
+</View>
 `;

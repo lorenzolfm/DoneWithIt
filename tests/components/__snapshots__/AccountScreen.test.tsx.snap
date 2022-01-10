@@ -44,6 +44,7 @@ exports[`AccountScreen snapshot matches 1`] = `
               "backgroundColor": "#4ecdc4",
               "name": "email",
             },
+            "targetScreen": "Messages",
             "title": "My Messages",
           },
         ]

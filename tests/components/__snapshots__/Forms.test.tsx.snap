@@ -1,188 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Forms AppForm snapshot matches 1`] = `
-<Formik
-  initialValues={
-    Object {
-      "email": "",
-      "password": "",
-    }
-  }
-  onSubmit={[MockFunction]}
->
-  <Component />
-</Formik>
-`;
+exports[`Forms AppForm snapshot matches 1`] = `null`;
 
 exports[`Forms AppFormField snapshot matches 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "dirty": false,
-      "errors": Object {},
-      "getFieldHelpers": [Function],
-      "getFieldMeta": [Function],
-      "getFieldProps": [Function],
-      "handleBlur": [Function],
-      "handleChange": [Function],
-      "handleReset": [Function],
-      "handleSubmit": [Function],
-      "initialErrors": Object {},
-      "initialStatus": undefined,
-      "initialTouched": Object {},
-      "initialValues": Object {
-        "email": "",
-        "password": "",
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#f8f4f4",
+        "borderRadius": 25,
+        "flexDirection": "row",
+        "marginVertical": 10,
+        "padding": 15,
       },
-      "isSubmitting": false,
-      "isValid": true,
-      "isValidating": false,
-      "registerField": [Function],
-      "resetForm": [Function],
-      "setErrors": [Function],
-      "setFieldError": [Function],
-      "setFieldTouched": [Function],
-      "setFieldValue": [Function],
-      "setFormikState": [Function],
-      "setStatus": [Function],
-      "setSubmitting": [Function],
-      "setTouched": [Function],
-      "setValues": [Function],
-      "status": undefined,
-      "submitCount": 0,
-      "submitForm": [Function],
-      "touched": Object {},
-      "unregisterField": [Function],
-      "validateField": [Function],
-      "validateForm": [Function],
-      "validateOnBlur": true,
-      "validateOnChange": true,
-      "validateOnMount": false,
-      "values": Object {
-        "email": "",
-        "password": "",
+      Object {
+        "width": "100%",
       },
-    }
+    ]
   }
 >
-  <AppFormField
-    name="test"
+  <TextInput
+    allowFontScaling={true}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    placeholderTextColor="#6e6969"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "color": "#0c0c0c",
+        "fontFamily": "Avenir",
+        "fontSize": 18,
+      }
+    }
+    underlineColorAndroid="transparent"
   />
-</ContextProvider>
+</View>
 `;
 
-exports[`Forms Error Message snapshot matches 1`] = `""`;
+exports[`Forms Error Message snapshot matches 1`] = `null`;
 
 exports[`Forms FormImagePicker snapshot matches 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "dirty": false,
-      "errors": Object {},
-      "getFieldHelpers": [Function],
-      "getFieldMeta": [Function],
-      "getFieldProps": [Function],
-      "handleBlur": [Function],
-      "handleChange": [Function],
-      "handleReset": [Function],
-      "handleSubmit": [Function],
-      "initialErrors": Object {},
-      "initialStatus": undefined,
-      "initialTouched": Object {},
-      "initialValues": Object {
-        "email": "",
-        "password": "",
-      },
-      "isSubmitting": false,
-      "isValid": true,
-      "isValidating": false,
-      "registerField": [Function],
-      "resetForm": [Function],
-      "setErrors": [Function],
-      "setFieldError": [Function],
-      "setFieldTouched": [Function],
-      "setFieldValue": [Function],
-      "setFormikState": [Function],
-      "setStatus": [Function],
-      "setSubmitting": [Function],
-      "setTouched": [Function],
-      "setValues": [Function],
-      "status": undefined,
-      "submitCount": 0,
-      "submitForm": [Function],
-      "touched": Object {},
-      "unregisterField": [Function],
-      "validateField": [Function],
-      "validateForm": [Function],
-      "validateOnBlur": true,
-      "validateOnChange": true,
-      "validateOnMount": false,
-      "values": Object {
-        "email": "",
-        "password": "",
-      },
-    }
-  }
->
-  <FormImagePicker
-    name="test"
-  />
-</ContextProvider>
+<View>
+  <RCTScrollView
+    horizontal={true}
+    onContentSizeChange={[Function]}
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#f8f4f4",
+              "borderRadius": 15,
+              "height": 100,
+              "justifyContent": "center",
+              "overflow": "hidden",
+              "width": 100,
+            }
+          }
+        >
+          <View
+            color="#6e6969"
+            name="camera"
+            size={40}
+          />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
 `;
 
 exports[`Forms SubmitButton snapshot matches 1`] = `
-<ContextProvider
-  value={
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
     Object {
-      "dirty": false,
-      "errors": Object {},
-      "getFieldHelpers": [Function],
-      "getFieldMeta": [Function],
-      "getFieldProps": [Function],
-      "handleBlur": [Function],
-      "handleChange": [Function],
-      "handleReset": [Function],
-      "handleSubmit": [Function],
-      "initialErrors": Object {},
-      "initialStatus": undefined,
-      "initialTouched": Object {},
-      "initialValues": Object {
-        "email": "",
-        "password": "",
-      },
-      "isSubmitting": false,
-      "isValid": true,
-      "isValidating": false,
-      "registerField": [Function],
-      "resetForm": [Function],
-      "setErrors": [Function],
-      "setFieldError": [Function],
-      "setFieldTouched": [Function],
-      "setFieldValue": [Function],
-      "setFormikState": [Function],
-      "setStatus": [Function],
-      "setSubmitting": [Function],
-      "setTouched": [Function],
-      "setValues": [Function],
-      "status": undefined,
-      "submitCount": 0,
-      "submitForm": [Function],
-      "touched": Object {},
-      "unregisterField": [Function],
-      "validateField": [Function],
-      "validateForm": [Function],
-      "validateOnBlur": true,
-      "validateOnChange": true,
-      "validateOnMount": false,
-      "values": Object {
-        "email": "",
-        "password": "",
-      },
+      "alignItems": "center",
+      "backgroundColor": "#fc5c65",
+      "borderRadius": 25,
+      "justifyContent": "center",
+      "marginVertical": 10,
+      "opacity": 1,
+      "padding": 15,
+      "width": "100%",
     }
   }
 >
-  <SubmitButton
-    title="test"
-  />
-</ContextProvider>
+  <Text
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    test
+  </Text>
+</View>
 `;

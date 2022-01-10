@@ -1,8 +1,8 @@
-import { shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import { AppPicker } from '../../app/components/AppPicker';
 
 describe('AppPicker', () => {
   it('snapshot matches', () => {
-    expect(shallow(<AppPicker />)).toMatchSnapshot();
+    expect(create(<AppPicker />)).toMatchSnapshot();
   });
 });

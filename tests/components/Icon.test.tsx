@@ -1,8 +1,8 @@
-import { shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import { Icon } from '../../app/components/Icon';
 
 describe('Icon', () => {
   it('snapshot matches', () => {
-    expect(shallow(<Icon name="test" />)).toMatchSnapshot();
+    expect(create(<Icon name="test" />)).toMatchSnapshot();
   });
 });

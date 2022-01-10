@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoginScreen snapshot matches 1`] = `
+exports[`RegisterScreen snapshot matches 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
   style={
@@ -27,18 +27,51 @@ exports[`LoginScreen snapshot matches 1`] = `
       ]
     }
   >
-    <Image
-      source={1}
+    <View
       style={
-        Object {
-          "alignSelf": "center",
-          "height": 80,
-          "marginBottom": 20,
-          "marginTop": 50,
-          "width": 80,
-        }
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#f8f4f4",
+            "borderRadius": 25,
+            "flexDirection": "row",
+            "marginVertical": 10,
+            "padding": 15,
+          },
+          Object {
+            "width": "100%",
+          },
+        ]
       }
-    />
+    >
+      <View
+        color="#6e6969"
+        name="account"
+        size={20}
+        style={
+          Object {
+            "marginRight": 10,
+          }
+        }
+      />
+      <TextInput
+        allowFontScaling={true}
+        autoCorrect={false}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        placeholder="Name"
+        placeholderTextColor="#6e6969"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "color": "#0c0c0c",
+            "fontFamily": "Avenir",
+            "fontSize": 18,
+          }
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
     <View
       style={
         Array [
@@ -168,7 +201,7 @@ exports[`LoginScreen snapshot matches 1`] = `
           }
         }
       >
-        Login
+        Register
       </Text>
     </View>
   </View>

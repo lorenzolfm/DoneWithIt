@@ -1,27 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ImageInput snapshot matches 1`] = `
-<TouchableWithoutFeedback
-  onPress={[Function]}
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#f8f4f4",
+      "borderRadius": 15,
+      "height": 100,
+      "justifyContent": "center",
+      "overflow": "hidden",
+      "width": 100,
+    }
+  }
 >
   <View
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#f8f4f4",
-        "borderRadius": 15,
-        "height": 100,
-        "justifyContent": "center",
-        "overflow": "hidden",
-        "width": 100,
-      }
-    }
-  >
-    <View
-      color="#6e6969"
-      name="camera"
-      size={40}
-    />
-  </View>
-</TouchableWithoutFeedback>
+    color="#6e6969"
+    name="camera"
+    size={40}
+  />
+</View>
 `;

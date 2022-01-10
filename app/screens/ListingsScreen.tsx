@@ -4,10 +4,11 @@ import { FlatList, StyleSheet } from "react-native";
 import { Card } from '../components/Card';
 import { Screen } from "../components/Screen";
 import routes from '../navigation/routes';
+import { Listing } from '../types';
 
 import defaultStyles from '../config/styles';
 
-const listings = [
+const listings: Listing[] = [
   {
     id: 0,
     title: 'Red jacket for sale',

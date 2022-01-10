@@ -1,10 +1,10 @@
-import { shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import { ListItem } from '../../app/components/ListItem';
 
 describe('ListItem', () => {
   it('matches snapshot', () => {
     expect(
-      shallow(
+      create(
         <ListItem
           title="test-title"
           subtitle="test-subtitle" 

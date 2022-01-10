@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import { Formik } from 'formik';
 import { View } from 'react-native';
 import { AppForm, AppFormField, AppFormPicker, ErrorMessage, SubmitButton, FormImagePicker } from '../../app/components/Forms';
@@ -9,13 +9,13 @@ describe('Forms', () => {
     password: '',
   };
   it('AppForm snapshot matches', () => {
-    expect(shallow(
+    expect(create(
       <AppForm initialValues={initialValues} onSubmit={jest.fn()} />
     )).toMatchSnapshot();
   });
 
   it('AppFormField snapshot matches', () => {
-    expect(shallow(
+    expect(create(
       <Formik initialValues={initialValues} onSubmit={jest.fn()}>
         <AppFormField name="test" />
       </Formik>
@@ -23,7 +23,7 @@ describe('Forms', () => {
   });
 
   it('AppFormPicker snapshot matches', () => {
-    expect(shallow(
+    expect(create(
       <Formik initialValues={initialValues} onSubmit={jest.fn()}>
         <AppFormPicker name="test" PickerItemComponent={<View />} numberOfColumns={1} />
       </Formik>
@@ -31,11 +31,11 @@ describe('Forms', () => {
   });
 
   it('Error Message snapshot matches', () => {
-    expect(shallow(<ErrorMessage visible />)).toMatchSnapshot();
+    expect(create(<ErrorMessage visible />)).toMatchSnapshot();
   });
 
   it('SubmitButton snapshot matches', () => {
-    expect(shallow(
+    expect(create(
       <Formik initialValues={initialValues} onSubmit={jest.fn()}>
         <SubmitButton title="test" />
       </Formik>
@@ -43,7 +43,7 @@ describe('Forms', () => {
   });
 
   it('FormImagePicker snapshot matches', () => {
-    expect(shallow(
+    expect(create(
       <Formik initialValues={initialValues} onSubmit={jest.fn()}>
         <FormImagePicker name="test" />
       </Formik>

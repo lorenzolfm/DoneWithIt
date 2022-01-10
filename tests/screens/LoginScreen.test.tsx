@@ -1,8 +1,8 @@
-import { shallow } from 'enzyme';
+import { create } from 'react-test-renderer';
 import { LoginScreen } from '../../app/screens/LoginScreen';
 
 describe('LoginScreen', () => {
   it('snapshot matches', () => {
-    expect(shallow(<LoginScreen />)).toMatchSnapshot();
+    expect(create(<LoginScreen />)).toMatchSnapshot();
   });
 });

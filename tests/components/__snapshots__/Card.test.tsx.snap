@@ -1,53 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card snapshot matches 1`] = `
-<View
-  style={
+<ForwardRef
+  delayLongPress={600}
+  extraButtonProps={
     Object {
-      "backgroundColor": "#fff",
-      "borderRadius": 15,
-      "marginBottom": 20,
-      "overflow": "hidden",
+      "rippleColor": "transparent",
     }
   }
+  onPress={[Function]}
 >
-  <Image
-    source={1}
-    style={
-      Object {
-        "height": 200,
-        "width": "100%",
-      }
-    }
-  />
   <View
     style={
       Object {
-        "padding": 20,
+        "backgroundColor": "#fff",
+        "borderRadius": 15,
+        "marginBottom": 20,
+        "overflow": "hidden",
       }
     }
   >
-    <AppText
-      numberOfLines={1}
+    <Image
+      source={1}
       style={
         Object {
-          "marginBottom": 10,
+          "height": 200,
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "padding": 20,
         }
       }
     >
-      title
-    </AppText>
-    <AppText
-      numberOfLines={2}
-      style={
-        Object {
-          "color": "#4ecdc4",
-          "fontWeight": "bold",
+      <AppText
+        numberOfLines={1}
+        style={
+          Object {
+            "marginBottom": 10,
+          }
         }
-      }
-    >
-      subtitle
-    </AppText>
+      >
+        title
+      </AppText>
+      <AppText
+        numberOfLines={2}
+        style={
+          Object {
+            "color": "#4ecdc4",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        subtitle
+      </AppText>
+    </View>
   </View>
-</View>
+</ForwardRef>
 `;

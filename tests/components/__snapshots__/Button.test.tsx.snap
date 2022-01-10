@@ -1,23 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button snapshot matches 1`] = `
-<ForwardRef
-  onPress={[MockFunction]}
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
-    Array [
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#fc5c65",
-        "borderRadius": 25,
-        "justifyContent": "center",
-        "marginVertical": 10,
-        "padding": 15,
-        "width": "100%",
-      },
-      Object {
-        "backgroundColor": "#fc5c65",
-      },
-    ]
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fc5c65",
+      "borderRadius": 25,
+      "justifyContent": "center",
+      "marginVertical": 10,
+      "opacity": 1,
+      "padding": 15,
+      "width": "100%",
+    }
   }
 >
   <Text
@@ -32,5 +36,5 @@ exports[`Button snapshot matches 1`] = `
   >
     test
   </Text>
-</ForwardRef>
+</View>
 `;
