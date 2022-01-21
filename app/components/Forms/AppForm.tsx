@@ -3,7 +3,7 @@ import { Formik, FormikHelpers } from 'formik';
 
 type Props = {
   initialValues: Object,
-  onSubmit: ((values: Object, formikHelpers: FormikHelpers<Object>) => void | Promise<any>) & Function,
+  onSubmit: ((values: any, formikHelpers: FormikHelpers<Object>) => void | Promise<any>) & Function,
   validationSchema?: Object,
   children?: React.ReactNode,
 };

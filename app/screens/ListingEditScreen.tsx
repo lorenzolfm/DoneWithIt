@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import * as Yup from 'yup';
 import { useLocation } from '../hooks/useLocation';
+import { addListing } from '../api/listings'
 
 import {
   AppForm,
@@ -12,6 +13,7 @@ import {
 import { CategoryPickerItem } from '../components/CategoryPickerItem';
 import { Screen } from '../components/Screen';
 import { FormImagePicker } from '../components/Forms/FormImagePicker';
+import { Listing } from '../types';
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label('Title'),
@@ -38,11 +40,17 @@ const initialValues = {
 export const ListingEditScreen = () => {
   const location = useLocation();
 
+  const handleSubmit = async (listing: Listing) => {
+    const result = await addListing({...listing, location});
+    if (!result.ok) return alert('Could not save the listing.');
+    alert('Success');
+  }
+
   return (
     <Screen style={styles.container}>
       <AppForm
         initialValues={initialValues}
-        onSubmit={(values) => console.log(location)}
+        onSubmit={handleSubmit}
         validationSchema={validationSchema}
       >
         <FormImagePicker name="images" />
@@ -69,7 +77,7 @@ export const ListingEditScreen = () => {
           numberOfLines={3}
           placeholder="Description"
         />
-        <SubmitButton title="Post" onSubmit={() => console.log(location)} />
+        <SubmitButton title="Post"/>
       </AppForm>
     </Screen>
   );

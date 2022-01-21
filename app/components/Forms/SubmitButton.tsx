@@ -8,6 +8,6 @@ export const SubmitButton = ({ title }: Props) => {
   const { handleSubmit } = useFormikContext();
 
   return (
-    <Button title={title} onPress={() => handleSubmit} />
+    <Button title={title} onPress={() => handleSubmit()} />
   );
 };

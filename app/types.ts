@@ -13,12 +13,24 @@ export interface IIndexable {
   [key: string]: any,
 };
 
+export interface Image {
+  name: string,
+  type: string,
+  url: string,
+  thumbnailUrl: string,
+}
+
+export interface Location {
+  latitude: number,
+  longitude: number,
+}
+
 export interface Listing {
   id: number;
   title: string,
   price: number,
-  images: {
-    url: string,
-    thumbnailUrl: string,
-  }[],
+  category?: any,
+  description: string,
+  images: Image[],
+  location?: Location,
 }
