@@ -21,7 +21,11 @@ exports[`Card snapshot matches 1`] = `
     }
   >
     <Image
-      source={1}
+      source={
+        Object {
+          "uri": undefined,
+        }
+      }
       style={
         Object {
           "height": 200,

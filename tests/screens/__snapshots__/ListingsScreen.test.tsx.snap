@@ -10,22 +10,7 @@ exports[`ListingsScreen snapshot matches 1`] = `
   }
 >
   <FlatList
-    data={
-      Array [
-        Object {
-          "id": 0,
-          "image": 1,
-          "price": 100,
-          "title": "Red jacket for sale",
-        },
-        Object {
-          "id": 1,
-          "image": 1,
-          "price": 100,
-          "title": "Couch in great condition",
-        },
-      ]
-    }
+    data={Array []}
     disableVirtualization={false}
     horizontal={false}
     initialNumToRender={10}

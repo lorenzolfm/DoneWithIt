@@ -1,4 +1,8 @@
-import { ImageSourcePropType } from "react-native";
+export interface Navigation {
+  navigation: {
+    navigate(route: string, params: any): void;
+  }
+}
 
 export interface Category {
   label: string,
@@ -13,5 +17,8 @@ export interface Listing {
   id: number;
   title: string,
   price: number,
-  image: ImageSourcePropType,
+  images: {
+    url: string,
+    thumbnailUrl: string,
+  }[],
 }

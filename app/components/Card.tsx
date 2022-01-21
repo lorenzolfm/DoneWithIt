@@ -1,20 +1,22 @@
 import React from 'react';
-import { Image, ImageSourcePropType, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 import defaultStyles from '../config/styles';
 import { AppText } from "./AppText";
+
 type CardProps = {
   title: string,
   subtitle: string,
-  image: ImageSourcePropType,
+  imageUrl: string,
   onPress: () => void,
 }
-export const Card = ({ title, subtitle, image, onPress }: CardProps) => {
+
+export const Card = ({ title, subtitle, imageUrl, onPress }: CardProps) => {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.card}>
-        <Image source={image} style={styles.image}/>
+        <Image source={{uri: imageUrl}} style={styles.image}/>
         <View style={styles.detailsContainer}>
           <AppText style={styles.title} numberOfLines={1}>{title}</AppText>
           <AppText style={styles.subtitle} numberOfLines={2}>{subtitle}</AppText>
