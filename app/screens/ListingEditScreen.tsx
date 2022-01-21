@@ -15,6 +15,7 @@ import { Screen } from '../components/Screen';
 import { FormImagePicker } from '../components/Forms/FormImagePicker';
 import { Listing } from '../types';
 import { UploadScreen } from './UploadScreen';
+import { FormikBag } from 'formik';
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label('Title'),
@@ -94,7 +95,7 @@ export const ListingEditScreen = () => {
   const [uploadVisible, setUploadVisible] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
 
-  const handleSubmit = async (listing: Listing) => {
+  const handleSubmit = async (listing: Listing, { resetForm }: FormikBag): Promise<void> => {
     setProgress(0)
     setUploadVisible(true);
     const result = await addListing(
@@ -106,6 +107,8 @@ export const ListingEditScreen = () => {
       setUploadVisible(false);
       return alert("Could not save the listing");
     }
+
+    resetForm()
   }
 
   return (

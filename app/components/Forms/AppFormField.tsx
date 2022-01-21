@@ -13,13 +13,14 @@ type Props = {
 };
 
 export const AppFormField = ({ name, width = '100%', ...otherProps }: Props) => {
-  const { setFieldTouched, handleChange, errors, touched } = useFormikContext();
+  const { setFieldTouched, setFieldValue, values, errors, touched } = useFormikContext();
 
   return (
     <>
       <AppTextInput
         onBlur={() => setFieldTouched(name)}
-        onChangeText={handleChange(name)}
+        onChangeText={(text: string) => setFieldValue(name, text)}
+        value={(values as IIndexable)[name]}
         width={width}
         {...otherProps}
       />
