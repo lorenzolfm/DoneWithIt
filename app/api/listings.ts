@@ -4,7 +4,7 @@ import { apiClient } from './client';
 const endpoint = '/listings';
 export const getListings = () => apiClient.get(endpoint)
 
-export const addListing = (listing: Listing) => {
+export const addListing = (listing: Listing, onUploadProgress: Function) => {
   const data = new FormData();
   data.append('title', listing.title)
   data.append('price', listing.price.toString())
@@ -21,5 +21,7 @@ export const addListing = (listing: Listing) => {
   if (listing.location)
     data.append('location', JSON.stringify(listing.location));
 
-  return apiClient.post(endpoint, data);
+  return apiClient.post(endpoint, data, {
+    onUploadProgress: progress => onUploadProgress(progress.loaded / progress.total)
+  });
 }
