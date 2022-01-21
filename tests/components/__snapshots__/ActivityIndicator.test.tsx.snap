@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActivityIndicator snapshot matches 1`] = `
+<LottieView
+  autoPlay={true}
+  autoSize={false}
+  cacheComposition={true}
+  enableMergePathsAndroidForKitKatAndAbove={false}
+  loop={true}
+  progress={0}
+  resizeMode="contain"
+  source={
+    Object {
+      "assets": Array [],
+      "ddd": 0,
+      "fr": 25,
+      "h": 600,
+      "ip": 0,
+      "layers": Array [
+        Object {
+          "ao": 0,
+          "bm": 0,
+          "ddd": 0,
+          "ind": 0,
+          "ip": 0,
+          "ks": Object {
+            "a": Object {
+              "k": Array [
+                0.621,
+                10.313,
+                0,
+              ],
+            },
+            "o": Object {
+              "k": 100,
+            },
+            "p": Object {
+              "k": Array [
+                400.621,
+                310.313,
+                0,
+              ],
+            },
+            "r": Object {
+              "k": Array [
+                Object {
+                  "e": Array [
+                    270,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    0,
+                  ],
+                  "t": 0,
+                },
+                Object {
+                  "e": Array [
+                    360,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    270,
+                  ],
+                  "t": 17,
+                },
+                Object {
+                  "e": Array [
+                    630,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    360,
+                  ],
+                  "t": 35.167,
+                },
+                Object {
+                  "e": Array [
+                    720,
+                  ],
+                  "i": Object {
+                    "x": Array [
+                      0.833,
+                    ],
+                    "y": Array [
+                      0.833,
+                    ],
+                  },
+                  "n": Array [
+                    "0p833_0p833_0p167_0p167",
+                  ],
+                  "o": Object {
+                    "x": Array [
+                      0.167,
+                    ],
+                    "y": Array [
+                      0.167,
+                    ],
+                  },
+                  "s": Array [
+                    630,
+                  ],
+                  "t": 51,
+                },
+                Object {
+                  "t": 69,
+                },
+              ],
+            },
+            "s": Object {
+              "k": Array [
+                300,
+                300,
+                100,
+              ],
+            },
+          },
+          "nm": "形状图层 2",
+          "op": 750,
+          "shapes": Array [
+            Object {
+              "it": Array [
+                Object {
+                  "d": 1,
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "nm": "椭圆路径 1",
+                  "p": Object {
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "s": Object {
+                    "k": Array [
+                      47.704,
+                      47.704,
+                    ],
+                  },
+                  "ty": "el",
+                },
+                Object {
+                  "c": Object {
+                    "k": Array [
+                      0.9882352941176471,
+                      0.3607843137254902,
+                      0.396078431372549,
+                      1,
+                    ],
+                  },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "nm": "描边 1",
+                  "o": Object {
+                    "k": 100,
+                  },
+                  "ty": "st",
+                  "w": Object {
+                    "k": 2,
+                  },
+                },
+                Object {
+                  "a": Object {
+                    "ix": 1,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "nm": "变换",
+                  "o": Object {
+                    "ix": 7,
+                    "k": 100,
+                  },
+                  "p": Object {
+                    "ix": 2,
+                    "k": Array [
+                      0.621,
+                      10.313,
+                    ],
+                  },
+                  "r": Object {
+                    "ix": 6,
+                    "k": 0,
+                  },
+                  "s": Object {
+                    "ix": 3,
+                    "k": Array [
+                      100,
+                      100,
+                    ],
+                  },
+                  "sa": Object {
+                    "ix": 5,
+                    "k": 0,
+                  },
+                  "sk": Object {
+                    "ix": 4,
+                    "k": 0,
+                  },
+                  "ty": "tr",
+                },
+              ],
+              "mn": "ADBE Vector Group",
+              "nm": "椭圆 1",
+              "np": 3,
+              "ty": "gr",
+            },
+            Object {
+              "e": Object {
+                "ix": 2,
+                "k": 25,
+              },
+              "ix": 2,
+              "m": 1,
+              "mn": "ADBE Vector Filter - Trim",
+              "nm": "修剪路径 1",
+              "o": Object {
+                "ix": 3,
+                "k": 0,
+              },
+              "s": Object {
+                "ix": 1,
+                "k": 0,
+              },
+              "ty": "tm",
+            },
+          ],
+          "sr": 1,
+          "st": 0,
+          "ty": 4,
+        },
+        Object {
+          "ao": 0,
+          "bm": 0,
+          "ddd": 0,
+          "ind": 1,
+          "ip": 0,
+          "ks": Object {
+            "a": Object {
+              "k": Array [
+                0.621,
+                10.313,
+                0,
+              ],
+            },
+            "o": Object {
+              "k": 100,
+            },
+            "p": Object {
+              "k": Array [
+                400.621,
+                310.313,
+                0,
+              ],
+            },
+            "r": Object {
+              "k": 0,
+            },
+            "s": Object {
+              "k": Array [
+                300,
+                300,
+                100,
+              ],
+            },
+          },
+          "nm": "形状图层 1",
+          "op": 750,
+          "shapes": Array [
+            Object {
+              "it": Array [
+                Object {
+                  "d": 1,
+                  "mn": "ADBE Vector Shape - Ellipse",
+                  "nm": "椭圆路径 1",
+                  "p": Object {
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "s": Object {
+                    "k": Array [
+                      47.704,
+                      47.704,
+                    ],
+                  },
+                  "ty": "el",
+                },
+                Object {
+                  "c": Object {
+                    "k": Array [
+                      0.91,
+                      0.91,
+                      0.91,
+                      1,
+                    ],
+                  },
+                  "lc": 1,
+                  "lj": 1,
+                  "ml": 4,
+                  "mn": "ADBE Vector Graphic - Stroke",
+                  "nm": "描边 1",
+                  "o": Object {
+                    "k": 100,
+                  },
+                  "ty": "st",
+                  "w": Object {
+                    "k": 2,
+                  },
+                },
+                Object {
+                  "a": Object {
+                    "ix": 1,
+                    "k": Array [
+                      0,
+                      0,
+                    ],
+                  },
+                  "nm": "变换",
+                  "o": Object {
+                    "ix": 7,
+                    "k": 100,
+                  },
+                  "p": Object {
+                    "ix": 2,
+                    "k": Array [
+                      0.621,
+                      10.313,
+                    ],
+                  },
+                  "r": Object {
+                    "ix": 6,
+                    "k": 0,
+                  },
+                  "s": Object {
+                    "ix": 3,
+                    "k": Array [
+                      100,
+                      100,
+                    ],
+                  },
+                  "sa": Object {
+                    "ix": 5,
+                    "k": 0,
+                  },
+                  "sk": Object {
+                    "ix": 4,
+                    "k": 0,
+                  },
+                  "ty": "tr",
+                },
+              ],
+              "mn": "ADBE Vector Group",
+              "nm": "椭圆 1",
+              "np": 3,
+              "ty": "gr",
+            },
+          ],
+          "sr": 1,
+          "st": 0,
+          "ty": 4,
+        },
+      ],
+      "op": 69,
+      "v": "4.5.4",
+      "w": 800,
+    }
+  }
+  speed={1}
+/>
+`;

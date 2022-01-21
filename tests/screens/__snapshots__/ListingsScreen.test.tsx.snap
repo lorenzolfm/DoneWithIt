@@ -9,6 +9,9 @@ exports[`ListingsScreen snapshot matches 1`] = `
     }
   }
 >
+  <ActivityIndicator
+    visible={true}
+  />
   <FlatList
     data={Array []}
     disableVirtualization={false}
