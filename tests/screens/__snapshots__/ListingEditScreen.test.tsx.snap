@@ -31,6 +31,68 @@ exports[`ListingEditScreen snapshot matches 1`] = `
       ]
     }
   >
+    <Modal
+      hardwareAccelerated={false}
+      visible={false}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          animated={true}
+          animationConfig={
+            Object {
+              "bounciness": 0,
+            }
+          }
+          animationType="spring"
+          indeterminate={false}
+          indeterminateAnimationDuration={1000}
+          onLayout={[Function]}
+          progress={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": undefined,
+                "borderColor": "#fc5c65",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "overflow": "hidden",
+                "width": 200,
+              },
+              undefined,
+            ]
+          }
+          useNativeDriver={false}
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#fc5c65",
+                "height": 6,
+                "transform": Array [
+                  Object {
+                    "translateX": -7.105427357601002e-15,
+                  },
+                  Object {
+                    "translateX": -99,
+                  },
+                  Object {
+                    "scaleX": 0.0001,
+                  },
+                ],
+              }
+            }
+          />
+        </View>
+      </View>
+    </Modal>
     <View>
       <RCTScrollView
         horizontal={true}
@@ -109,6 +171,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
           }
         }
         underlineColorAndroid="transparent"
+        value=""
       />
     </View>
     <View
@@ -145,6 +208,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
           }
         }
         underlineColorAndroid="transparent"
+        value=""
       />
     </View>
     <View
@@ -269,22 +333,58 @@ exports[`ListingEditScreen snapshot matches 1`] = `
             data={
               Array [
                 Object {
-                  "backgroundColor": "red",
-                  "icon": "apps",
+                  "backgroundColor": "#fc5c65",
+                  "icon": "floor-lamp",
                   "label": "Furniture",
                   "value": 1,
                 },
                 Object {
-                  "backgroundColor": "green",
-                  "icon": "email",
-                  "label": "Clothing",
+                  "backgroundColor": "#fd9644",
+                  "icon": "car",
+                  "label": "Cars",
                   "value": 2,
                 },
                 Object {
-                  "backgroundColor": "blue",
-                  "icon": "lock",
-                  "label": "Camera",
+                  "backgroundColor": "#fed330",
+                  "icon": "camera",
+                  "label": "Cameras",
                   "value": 3,
+                },
+                Object {
+                  "backgroundColor": "#26de81",
+                  "icon": "cards",
+                  "label": "Games",
+                  "value": 4,
+                },
+                Object {
+                  "backgroundColor": "#2bcbba",
+                  "icon": "shoe-heel",
+                  "label": "Clothing",
+                  "value": 5,
+                },
+                Object {
+                  "backgroundColor": "#45aaf2",
+                  "icon": "basketball",
+                  "label": "Sports",
+                  "value": 6,
+                },
+                Object {
+                  "backgroundColor": "#4b7bec",
+                  "icon": "headphones",
+                  "label": "Movies & Music",
+                  "value": 7,
+                },
+                Object {
+                  "backgroundColor": "#a55eea",
+                  "icon": "book-open-variant",
+                  "label": "Books",
+                  "value": 8,
+                },
+                Object {
+                  "backgroundColor": "#778ca3",
+                  "icon": "application",
+                  "label": "Other",
+                  "value": 9,
                 },
               ]
             }
@@ -346,7 +446,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "red",
+                          "backgroundColor": "#fc5c65",
                           "borderRadius": 40,
                           "height": 80,
                           "justifyContent": "center",
@@ -356,7 +456,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
                     >
                       <View
                         color="#fff"
-                        name="apps"
+                        name="floor-lamp"
                         size={40}
                       />
                     </View>
@@ -402,7 +502,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "green",
+                          "backgroundColor": "#fd9644",
                           "borderRadius": 40,
                           "height": 80,
                           "justifyContent": "center",
@@ -412,7 +512,188 @@ exports[`ListingEditScreen snapshot matches 1`] = `
                     >
                       <View
                         color="#fff"
-                        name="email"
+                        name="car"
+                        size={40}
+                      />
+                    </View>
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#0c0c0c",
+                            "fontFamily": "Avenir",
+                            "fontSize": 18,
+                          },
+                          Object {
+                            "marginTop": 5,
+                            "textAlign": "center",
+                          },
+                        ]
+                      }
+                    >
+                      Cars
+                    </Text>
+                  </View>
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "opacity": 1,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 15,
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#fed330",
+                          "borderRadius": 40,
+                          "height": 80,
+                          "justifyContent": "center",
+                          "width": 80,
+                        }
+                      }
+                    >
+                      <View
+                        color="#fff"
+                        name="camera"
+                        size={40}
+                      />
+                    </View>
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#0c0c0c",
+                            "fontFamily": "Avenir",
+                            "fontSize": 18,
+                          },
+                          Object {
+                            "marginTop": 5,
+                            "textAlign": "center",
+                          },
+                        ]
+                      }
+                    >
+                      Cameras
+                    </Text>
+                  </View>
+                </View>
+              </View>
+              <View
+                onLayout={[Function]}
+                style={null}
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "opacity": 1,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 15,
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#26de81",
+                          "borderRadius": 40,
+                          "height": 80,
+                          "justifyContent": "center",
+                          "width": 80,
+                        }
+                      }
+                    >
+                      <View
+                        color="#fff"
+                        name="cards"
+                        size={40}
+                      />
+                    </View>
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#0c0c0c",
+                            "fontFamily": "Avenir",
+                            "fontSize": 18,
+                          },
+                          Object {
+                            "marginTop": 5,
+                            "textAlign": "center",
+                          },
+                        ]
+                      }
+                    >
+                      Games
+                    </Text>
+                  </View>
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "opacity": 1,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 15,
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#2bcbba",
+                          "borderRadius": 40,
+                          "height": 80,
+                          "justifyContent": "center",
+                          "width": 80,
+                        }
+                      }
+                    >
+                      <View
+                        color="#fff"
+                        name="shoe-heel"
                         size={40}
                       />
                     </View>
@@ -458,7 +739,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "blue",
+                          "backgroundColor": "#45aaf2",
                           "borderRadius": 40,
                           "height": 80,
                           "justifyContent": "center",
@@ -468,7 +749,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
                     >
                       <View
                         color="#fff"
-                        name="lock"
+                        name="basketball"
                         size={40}
                       />
                     </View>
@@ -487,7 +768,188 @@ exports[`ListingEditScreen snapshot matches 1`] = `
                         ]
                       }
                     >
-                      Camera
+                      Sports
+                    </Text>
+                  </View>
+                </View>
+              </View>
+              <View
+                onLayout={[Function]}
+                style={null}
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "opacity": 1,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 15,
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#4b7bec",
+                          "borderRadius": 40,
+                          "height": 80,
+                          "justifyContent": "center",
+                          "width": 80,
+                        }
+                      }
+                    >
+                      <View
+                        color="#fff"
+                        name="headphones"
+                        size={40}
+                      />
+                    </View>
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#0c0c0c",
+                            "fontFamily": "Avenir",
+                            "fontSize": 18,
+                          },
+                          Object {
+                            "marginTop": 5,
+                            "textAlign": "center",
+                          },
+                        ]
+                      }
+                    >
+                      Movies & Music
+                    </Text>
+                  </View>
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "opacity": 1,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 15,
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#a55eea",
+                          "borderRadius": 40,
+                          "height": 80,
+                          "justifyContent": "center",
+                          "width": 80,
+                        }
+                      }
+                    >
+                      <View
+                        color="#fff"
+                        name="book-open-variant"
+                        size={40}
+                      />
+                    </View>
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#0c0c0c",
+                            "fontFamily": "Avenir",
+                            "fontSize": 18,
+                          },
+                          Object {
+                            "marginTop": 5,
+                            "textAlign": "center",
+                          },
+                        ]
+                      }
+                    >
+                      Books
+                    </Text>
+                  </View>
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "opacity": 1,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 15,
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#778ca3",
+                          "borderRadius": 40,
+                          "height": 80,
+                          "justifyContent": "center",
+                          "width": 80,
+                        }
+                      }
+                    >
+                      <View
+                        color="#fff"
+                        name="application"
+                        size={40}
+                      />
+                    </View>
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#0c0c0c",
+                            "fontFamily": "Avenir",
+                            "fontSize": 18,
+                          },
+                          Object {
+                            "marginTop": 5,
+                            "textAlign": "center",
+                          },
+                        ]
+                      }
+                    >
+                      Other
                     </Text>
                   </View>
                 </View>
@@ -532,6 +994,7 @@ exports[`ListingEditScreen snapshot matches 1`] = `
           }
         }
         underlineColorAndroid="transparent"
+        value=""
       />
     </View>
     <View

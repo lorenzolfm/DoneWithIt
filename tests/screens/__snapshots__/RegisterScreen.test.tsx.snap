@@ -70,6 +70,7 @@ exports[`RegisterScreen snapshot matches 1`] = `
           }
         }
         underlineColorAndroid="transparent"
+        value=""
       />
     </View>
     <View
@@ -118,6 +119,7 @@ exports[`RegisterScreen snapshot matches 1`] = `
         }
         textContentType="emailAddress"
         underlineColorAndroid="transparent"
+        value=""
       />
     </View>
     <View
@@ -166,6 +168,7 @@ exports[`RegisterScreen snapshot matches 1`] = `
         }
         textContentType="password"
         underlineColorAndroid="transparent"
+        value=""
       />
     </View>
     <View

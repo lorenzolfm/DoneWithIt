@@ -85,6 +85,7 @@ exports[`LoginScreen snapshot matches 1`] = `
         }
         textContentType="emailAddress"
         underlineColorAndroid="transparent"
+        value=""
       />
     </View>
     <View
@@ -133,6 +134,7 @@ exports[`LoginScreen snapshot matches 1`] = `
         }
         textContentType="password"
         underlineColorAndroid="transparent"
+        value=""
       />
     </View>
     <View
