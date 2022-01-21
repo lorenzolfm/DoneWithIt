@@ -1,4 +1,4 @@
-import { Listing } from '../types';
+import { Listing, Image } from '../types';
 import { apiClient } from './client';
 
 const endpoint = '/listings';
@@ -16,8 +16,7 @@ export const addListing = (listing: Listing, onUploadProgress: (progress: number
       name: 'image' + index,
       type: 'image/jpeg',
       uri: image
-    })
-  );
+    } as Image));
 
   if (listing.location)
     data.append('location', JSON.stringify(listing.location));
