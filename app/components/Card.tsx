@@ -1,6 +1,7 @@
 import React from 'react';
-import { Image, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { Image } from 'react-native-expo-image-cache';
 
 import defaultStyles from '../config/styles';
 import { AppText } from "./AppText";
@@ -9,14 +10,20 @@ type CardProps = {
   title: string,
   subtitle: string,
   imageUrl: string,
+  thumbnailUrl: string,
   onPress: () => void,
 }
 
-export const Card = ({ title, subtitle, imageUrl, onPress }: CardProps) => {
+export const Card = ({ title, subtitle, imageUrl, thumbnailUrl, onPress }: CardProps) => {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.card}>
-        <Image source={{uri: imageUrl}} style={styles.image}/>
+        <Image
+          uri={imageUrl}
+          style={styles.image}
+          preview={{ uri: thumbnailUrl  }}
+          tint="light"
+        />
         <View style={styles.detailsContainer}>
           <AppText style={styles.title} numberOfLines={1}>{title}</AppText>
           <AppText style={styles.subtitle} numberOfLines={2}>{subtitle}</AppText>

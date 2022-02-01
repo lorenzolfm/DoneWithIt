@@ -2,7 +2,7 @@ import { Listing } from '../types';
 import { apiClient } from './client';
 
 const endpoint = '/listings';
-export const getListings = () => apiClient.get(endpoint)
+export const getListings = () => apiClient.get(endpoint);
 
 export const addListing = (listing: Listing, onUploadProgress: (progress: number) => void) => {
   const data = new FormData();

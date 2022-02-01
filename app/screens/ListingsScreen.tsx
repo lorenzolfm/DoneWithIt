@@ -35,6 +35,7 @@ export const ListingsScreen = ({ navigation: { navigate } }: Navigation) => {
             title={item.title}
             subtitle={"$" + item.price}
             imageUrl={item.images[0].url}
+            thumbnailUrl={item.images[0].thumbnailUrl}
             onPress={() => navigate(routes.LISTING_DETAILS, item)}
           />
         }
