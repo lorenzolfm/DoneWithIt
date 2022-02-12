@@ -6,6 +6,7 @@ import { ListItem } from '../components/ListItem';
 import { ListItemSeparator } from '../components/ListItemSeparator';
 import { Screen } from '../components/Screen';
 import defaultStyles from '../config/styles';
+import { Navigation } from '../types';
 
 const menuItems = [
   {
@@ -25,7 +26,7 @@ const menuItems = [
   },
 ]
 
-export const AccountScreen = ({ navigation: { navigate } }) => {
+export const AccountScreen = ({ navigation: { navigate } }: Navigation) => {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
