@@ -37,9 +37,11 @@ export interface Listing {
   location?: Location,
 }
 
-type UserSetter = React.Dispatch<React.SetStateAction<User | undefined>>;
+export type TUser = User | null;
+type UserSetter = React.Dispatch<React.SetStateAction<TUser>>;
+
 export interface UserState {
-  user: User | undefined;
+  user: TUser;
   setUser: UserSetter;
 }
 

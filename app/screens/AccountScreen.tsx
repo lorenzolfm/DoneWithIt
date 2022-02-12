@@ -36,7 +36,7 @@ const menuItems: MenuItem[] = [
 ]
 
 export const AccountScreen = ({ navigation: { navigate } }: Navigation) => {
-  const { user } = useContext(AuthContext);
+  const { user, setUser } = useContext(AuthContext);
 
   return (
     <Screen style={styles.screen}>
@@ -69,6 +69,7 @@ export const AccountScreen = ({ navigation: { navigate } }: Navigation) => {
         IconComponent={
           <Icon name="logout" backgroundColor="#ffe66d" />
         }
+        onPress={() => setUser(null)}
       />
     </Screen>
   );
