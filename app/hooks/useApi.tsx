@@ -1,26 +1,30 @@
 import { useState } from 'react';
-import { Listing } from '../types';
 
-interface useApiReturn {
-  request(...args: any[]): Promise<void>;
-  data: (Listing | never)[];
+interface useApiReturn<T> {
+  request(...args: any[]): Promise<T>;
+  data: T;
   error: boolean;
   loading: boolean;
 }
-export const useApi = (callback: Function): useApiReturn => {
+
+export const useApi = (callback: Function): useApiReturn<any> => {
   const [data, setData] = useState([]);
   const [error, setError] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const request = async (...args: any[]) => {
     setLoading(true);
     const response = await callback(...args);
     setLoading(false);
 
-    if (!response.ok) return setError(true);
-
-    setError(false)
+    setError(!response.ok);
     setData(response.data);
+
+    if (!response.ok) {
+      return response;
+    }
+
+    return response;
   };
 
   return { request, data, error, loading };
