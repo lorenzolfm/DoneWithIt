@@ -18,7 +18,7 @@ export const getUser = async (): Promise<User | null> => {
   return token ? jwtDecode(token) : null;
 }
 
-const getToken = async (): Promise<null | string | undefined> => {
+export const getToken = async (): Promise<null | string | undefined> => {
   try {
     return await SecureStore.getItemAsync(key);
   }
