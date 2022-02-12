@@ -9,7 +9,7 @@ import { AppText } from './AppText';
 export const OfflineNotice = () => {
   const netInfo = useNetInfo();
 
-  if (netInfo.type !== 'unkown' && netInfo.isInternetReachable)
+  if ((netInfo.type !== 'unkown') && netInfo.isInternetReachable)
     return (
       <View style={styles.container}>
         <AppText>No Internet Connection</AppText>

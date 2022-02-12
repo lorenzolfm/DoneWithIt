@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface Navigation {
   navigation: {
     navigate(route: string, params: any): void;
@@ -33,4 +35,15 @@ export interface Listing {
   description: string,
   images: Image[],
   location?: Location,
+}
+
+type UserSetter = React.Dispatch<React.SetStateAction<User | undefined>>;
+export interface UserState {
+  user: User | undefined;
+  setUser: UserSetter;
+}
+
+export interface User {
+  email: string;
+  password: string;
 }
