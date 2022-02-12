@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native'
-import jwtDecode from 'jwt-decode';
 import AppLoading from 'expo-app-loading';
 
 import { navigationTheme } from './app/navigation/navigationTheme';
@@ -9,30 +8,31 @@ import { OfflineNotice } from './app/components/OfflineNotice';
 import { AuthNavigator } from './app/navigation/AuthNavigator';
 import { AuthContext } from './app/auth/context';
 import { TUser, UserState } from './app/types';
-import { getToken } from './app/auth/storage';
+import { getUser } from './app/auth/storage';
 
 
 export default function App() {
   const [user, setUser] = useState<TUser>(null);
   const [isReady, setIsReady] = useState(false);
 
-  const restoreToken = async () => {
-    const token = await getToken();
+  const restoreUser = async () => {
+    const user = await getUser();
 
-    if (!token)
+    if (!user)
       return;
 
-    setUser(jwtDecode(token));
+    setUser(user);
   }
 
   if (!isReady)
     return (
       <AppLoading
-        startAsync={restoreToken}
+        startAsync={restoreUser}
         onFinish={() => setIsReady(true)}
         onError={() => console.log('Error')}
       />
-    )
+    );
+
   return (
     <AuthContext.Provider value={{ user, setUser } as UserState}>
       <OfflineNotice />
