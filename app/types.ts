@@ -2,7 +2,7 @@ import React from "react";
 
 export interface Navigation {
   navigation: {
-    navigate(route: string, params: any): void;
+    navigate: (route: string, params?: any) => void;
   }
 }
 
@@ -44,6 +44,7 @@ export interface UserState {
 }
 
 export interface User {
+  name: string;
   email: string;
   password: string;
 }

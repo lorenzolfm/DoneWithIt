@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
+import { AuthContext } from '../auth/context';
 
 import { Icon } from '../components/Icon';
 import { ListItem } from '../components/ListItem';
@@ -8,13 +9,21 @@ import { Screen } from '../components/Screen';
 import defaultStyles from '../config/styles';
 import { Navigation } from '../types';
 
-const menuItems = [
+interface Icon { name: string; backgroundColor: string }
+interface MenuItem {
+  title: string;
+  icon: Icon;
+  targetScreen: string;
+}
+
+const menuItems: MenuItem[] = [
   {
     title: 'My Listings',
     icon: {
       name: 'format-list-bulleted',
       backgroundColor: defaultStyles.colors.primary,
     },
+    targetScreen: 'Listings'
   },
   {
     title: 'My Messages',
@@ -27,12 +36,14 @@ const menuItems = [
 ]
 
 export const AccountScreen = ({ navigation: { navigate } }: Navigation) => {
+  const { user } = useContext(AuthContext);
+
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
-          title="Mosh Hamedani"
-          subtitle="programmingwithmosh@gmail.com"
+          title={user?.name || 'unknown'}
+          subtitle={user?.email}
           image={require("../assets/mosh.jpg")}
         />
       </View>
