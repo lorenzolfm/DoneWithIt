@@ -22,12 +22,12 @@ export const ListingsScreen = ({ navigation: { navigate } }: Navigation) => {
 
   return (
     <>
+      <ActivityIndicator visible={loading} />
       <Screen style={styles.screen}>
         {error && <>
           <AppText>Couldn't retrieve listings</AppText>
           <Button onPress={loadListings} title="Retry" />
         </>}
-        <ActivityIndicator visible={loading} />
         <FlatList
           data={listings}
           keyExtractor={listing => listing.id.toString()}
