@@ -2,9 +2,9 @@
 
 This project is based in the DoneWithIt app, made in "The Ultimate React Native Series", by CodeWithMosh.
 
-I'm using TypeScript instead of JavaScript because TS i like strongly typed programming languages and i also like to catch bugs in compile time.
+I'm using TypeScript instead of JavaScript because TS rocks
 
-I'll also be using Jest because I want to improve my testing skills.
+I'm also using Jest because I want to improve my testing skills.
 
 ## How to find yourself
 
